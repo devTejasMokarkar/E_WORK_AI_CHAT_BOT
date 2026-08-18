@@ -6,21 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:cli": "node test-cli.js all",
+    "test:health": "node test-cli.js health",
+    "test:chat": "node test-cli.js chat",
+    "test:rag": "node test-cli.js rag",
+    "test:works": "node test-cli.js works",
+    "test:terminal": "node test-terminal.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.112.3",
+    "@tailwindcss/oxide": "^4.3.3",
+    "@tailwindcss/postcss": "^4.3.3",
+    "autoprefixer": "^10.5.4",
+    "cohere-ai": "^8.0.0",
     "next": "16.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "tailwindcss": "^3.4.19",
+    "uuid": "^14.0.1",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
-    "tailwindcss": "^4",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "ngrok": "^5.0.0-beta.2",
+    "ts-jest": "^29.4.12",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,54 @@
+{
+  "files": {
+    "code": [
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/test-terminal.js",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/jest.config.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/next.config.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/tailwind.config.js",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/next-env.d.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/jest.setup.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/test-cli.js",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/eslint.config.mjs",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/postcss.config.mjs",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/supabase/schema.sql",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/supabase/seed.sql",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/store.test.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/types.test.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/chatbot.test.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/page.tsx",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/layout.tsx",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/api/chat/route.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/api/health/route.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/components/TerminalChat.tsx",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/types/index.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/store/chatStore.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/chatbot.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/rag.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/cohere.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/supabase.ts",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/database.ts"
+    ],
+    "document": [
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/README.md",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/CLAUDE.md",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/AGENTS.md"
+    ],
+    "paper": [],
+    "image": [
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/next.svg",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/vercel.svg",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/window.svg",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/globe.svg",
+      "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/file.svg"
+    ],
+    "video": []
+  },
+  "total_files": 34,
+  "total_words": 13123,
+  "needs_graph": false,
+  "warning": "Corpus is ~13,123 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [
+    "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/e-Work WhatsApp Chatbot Requirements (2).docx [office conversion failed - pip install graphifyy[office]]"
+  ],
+  "graphifyignore_patterns": 0
+}
