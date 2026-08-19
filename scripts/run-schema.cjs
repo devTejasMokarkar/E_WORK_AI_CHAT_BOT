@@ -9,6 +9,7 @@ require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env.
 const fs = require('fs');
 const path = require('path');
 const { Pool } = require('pg');
+const { URL } = require('url');
 
 const DIRECT_CONNECTION = process.env.NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION;
 
@@ -17,7 +18,16 @@ if (!DIRECT_CONNECTION) {
   process.exit(1);
 }
 
-const pool = new Pool({ connectionString: DIRECT_CONNECTION });
+const connUrl = new URL(DIRECT_CONNECTION);
+const pool = new Pool({
+  host: connUrl.hostname,
+  port: connUrl.port || 5432,
+  database: connUrl.pathname.slice(1),
+  user: connUrl.username,
+  password: connUrl.password,
+  family: 4,
+  max: 10,
+});
 
 function splitStatements(sql) {
   const statements = [];

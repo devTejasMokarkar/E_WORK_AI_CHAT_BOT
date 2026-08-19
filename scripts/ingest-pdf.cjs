@@ -11,33 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const { Pool } = require('pg');
 const { CohereClient } = require('cohere-ai');
-
-/**
- * Chunk text into smaller pieces for embedding
- */
-function chunkText(text, chunkSize = 500, overlap = 50) {
-  const chunks = [];
-  const sentences = text.split(/(?<=[.!?])\s+/);
-  
-  let currentChunk = '';
-  
-  for (const sentence of sentences) {
-    if (currentChunk.length + sentence.length > chunkSize && currentChunk.length > 0) {
-      chunks.push(currentChunk.trim());
-      // Keep overlap from the end of the previous chunk
-      const words = currentChunk.split(/\s+/);
-      currentChunk = words.slice(-Math.floor(overlap / 5)).join(' ') + ' ' + sentence;
-    } else {
-      currentChunk += sentence + ' ';
-    }
-  }
-  
-  if (currentChunk.trim()) {
-    chunks.push(currentChunk.trim());
-  }
-  
-  return chunks;
-}
+const { URL } = require('url');
 
 const COHERE_API_KEY = process.env.COHERE_API_KEY;
 const DIRECT_CONNECTION = process.env.NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION;
@@ -52,8 +26,18 @@ if (!DIRECT_CONNECTION) {
   process.exit(1);
 }
 
+const connUrl = new URL(DIRECT_CONNECTION);
+const pool = new Pool({
+  host: connUrl.hostname,
+  port: connUrl.port || 5432,
+  database: connUrl.pathname.slice(1),
+  user: connUrl.username,
+  password: connUrl.password,
+  family: 4,
+  max: 10,
+});
+
 const cohere = new CohereClient({ token: COHERE_API_KEY });
-const pool = new Pool({ connectionString: DIRECT_CONNECTION });
 
 const UPLOADS_DIR = path.join(__dirname, '..', 'uploads');
 const CHUNK_SIZE = 500;

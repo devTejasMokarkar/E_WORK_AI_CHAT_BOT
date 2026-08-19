@@ -88,7 +88,7 @@ export async function POST(request: Request) {
       messages: session.messages,
       currentMenu: session.currentMenu,
       context: session.context,
-    });
+    }, storeState);
 
     // Update session messages
     session.messages.push(

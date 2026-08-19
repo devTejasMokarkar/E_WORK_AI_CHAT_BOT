@@ -30,9 +30,9 @@ function formatDate(dateStr: string): string {
 }
 
 // Process user input based on current menu state
-export async function processUserInput(input: string, session: ChatSession): Promise<string> {
+export async function processUserInput(input: string, session: ChatSession, customStore?: any): Promise<string> {
   const normalizedInput = input.trim().toLowerCase();
-  const store = useChatStore.getState();
+  const store = customStore || useChatStore.getState();
   
   // Handle back command
   if (normalizedInput === 'back' || normalizedInput === '0' || normalizedInput === 'exit') {
@@ -254,7 +254,7 @@ async function handleWorkStatus(input: string, session: ChatSession, store: Retu
 function getWorkDetailsMenu(): string {
   return `Work ID: ${useChatStore.getState().session.context.workId || 'N/A'}
 
-Select the required information:
+Menu:
 1. Work Details
 2. Administrative Sanction
 3. Technical Sanction
@@ -265,10 +265,9 @@ Select the required information:
 8. Measurement Book
 9. Voucher Details
 10. FTO Details
-11. Payment Status
-12. Utilization Certificate
-13. Completion Certificate
-14. Main Menu`;
+11. Utilization Certificate
+12. Completion Certificate
+13. Main Menu`;
 }
 
 function getWorkDetailsDisplay(work: Work): string {
@@ -310,15 +309,14 @@ async function handleWorkDetails(input: string, session: ChatSession, store: Ret
     '8': 'MEASUREMENT_BOOK',
     '9': 'VOUCHER_DETAILS',
     '10': 'FTO_DETAILS',
-    '11': 'PAYMENT_STATUS',
-    '12': 'UTILIZATION_CERTIFICATE',
-    '13': 'COMPLETION_CERTIFICATE',
-    '14': 'MAIN_MENU',
+    '11': 'UTILIZATION_CERTIFICATE',
+    '12': 'COMPLETION_CERTIFICATE',
+    '13': 'MAIN_MENU',
   };
 
   const menu = menuMap[normalizedInput];
   if (!menu) {
-    return 'Invalid option. Please select a number from 1-14.';
+    return 'Invalid option. Please select a number from 1-13.';
   }
 
   if (menu === 'MAIN_MENU') {
@@ -350,8 +348,6 @@ async function handleWorkDetails(input: string, session: ChatSession, store: Ret
       return await getVoucherDisplay(workId);
     case 'FTO_DETAILS':
       return await getFTODisplay(workId);
-    case 'PAYMENT_STATUS':
-      return await getPaymentDisplay(workId);
     case 'UTILIZATION_CERTIFICATE':
       return await getUCDisplay(workId);
     case 'COMPLETION_CERTIFICATE':

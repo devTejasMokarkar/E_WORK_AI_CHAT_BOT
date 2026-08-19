@@ -7,6 +7,7 @@
 require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env.local') });
 
 const { Pool } = require('pg');
+const { URL } = require('url');
 
 const DIRECT_CONNECTION = process.env.NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION;
 
@@ -15,7 +16,16 @@ if (!DIRECT_CONNECTION) {
   process.exit(1);
 }
 
-const pool = new Pool({ connectionString: DIRECT_CONNECTION });
+const connUrl = new URL(DIRECT_CONNECTION);
+const pool = new Pool({
+  host: connUrl.hostname,
+  port: connUrl.port || 5432,
+  database: connUrl.pathname.slice(1),
+  user: connUrl.username,
+  password: connUrl.password,
+  family: 4,
+  max: 10,
+});
 
 const FUNCTION_SQL = `
 -- Create the match_documents function for vector similarity search

@@ -1,24 +1,30 @@
 #!/usr/bin/env node
 
 /**
- * Test RAG search and response
+ * Test RAG search and response using Supabase REST API (works over IPv4)
  */
 
 require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env.local') });
 
-const { Pool } = require('pg');
+const { createClient } = require('@supabase/supabase-js');
 const { CohereClient } = require('cohere-ai');
+const WebSocket = require('ws');
 
 const COHERE_API_KEY = process.env.COHERE_API_KEY;
-const DIRECT_CONNECTION = process.env.NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION;
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!COHERE_API_KEY || !DIRECT_CONNECTION) {
-  console.error('Missing env vars');
+if (!COHERE_API_KEY || !SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  console.error('Missing env vars: COHERE_API_KEY, NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY');
   process.exit(1);
 }
 
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+  realtime: {
+    transport: WebSocket,
+  },
+});
 const cohere = new CohereClient({ token: COHERE_API_KEY });
-const pool = new Pool({ connectionString: DIRECT_CONNECTION });
 
 const TOP_K = 5;
 const SIMILARITY_THRESHOLD = 0.3;
@@ -40,26 +46,36 @@ async function searchKnowledgeBase(query, topK = TOP_K) {
   const queryEmbedding = await generateQueryEmbedding(query);
   const embeddingStr = `[${queryEmbedding.join(',')}]`;
   
-  // Try vector search
-  const result = await pool.query(
-    `SELECT content, source, 1 - (embedding <=> $1::vector) as similarity
-     FROM knowledge_base
-     WHERE embedding IS NOT NULL
-     AND 1 - (embedding <=> $1::vector) > $2
-     ORDER BY embedding <=> $1::vector
-     LIMIT $3`,
-    [embeddingStr, SIMILARITY_THRESHOLD, topK]
-  );
+  // Try vector search via RPC - check correct parameter name
+  const { data: results, error } = await supabase
+    .rpc('match_documents', {
+      query_embedding: embeddingStr,
+      match_threshold: SIMILARITY_THRESHOLD,
+      match_count: topK,
+    });
   
-  if (result.rows.length > 0) {
-    return result.rows;
+  if (!error && results && results.length > 0) {
+    return results.map(r => ({
+      content: r.content,
+      source: r.source || r.category || 'unknown',
+      similarity: r.similarity,
+    }));
   }
   
-  // Fallback to keyword search
-  const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
-  const kbResult = await pool.query('SELECT content, source FROM knowledge_base');
+  // Debug the error
+  console.log('  Vector search error:', JSON.stringify(error, null, 2));
+  console.log('  Falling back to keyword search...');
+  const { data: documents, error: kbError } = await supabase
+    .from('knowledge_base')
+    .select('content, source, category');
   
-  const scored = kbResult.rows.map(row => {
+  if (kbError || !documents || documents.length === 0) {
+    return [];
+  }
+  
+  const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  
+  const scored = documents.map(row => {
     const contentWords = row.content.toLowerCase().split(/\s+/);
     let matches = 0;
     for (const qw of queryWords) {
@@ -70,7 +86,11 @@ async function searchKnowledgeBase(query, topK = TOP_K) {
     .sort((a, b) => b.score - a.score)
     .slice(0, topK);
   
-  return scored.map(r => ({ ...r, similarity: r.score }));
+  return scored.map(r => ({
+    content: r.content,
+    source: r.source || r.category || 'unknown',
+    similarity: r.score,
+  }));
 }
 
 async function generateResponse(query, context) {
@@ -137,8 +157,6 @@ async function main() {
     await testQuery(query);
     console.log('\n' + '='.repeat(80));
   }
-  
-  await pool.end();
 }
 
 main();
