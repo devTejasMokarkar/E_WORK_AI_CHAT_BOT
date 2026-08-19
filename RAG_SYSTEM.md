@@ -160,6 +160,25 @@ ls uploads/
 - Run `npm run db:vector-fn` to create `match_documents` function
 - Verify `embedding` column exists in `knowledge_base`
 
+### Database Connection Issues
+
+#### "ENETUNREACH" / IPv6 Only
+The Supabase direct connection (`db.xxx.supabase.co`) only resolves to IPv6. If your network lacks IPv6:
+- **Option A**: Enable Connection Pooling in Supabase Dashboard → Settings → Database → Connection Pooling → Use pooler (port 6543, IPv4)
+- **Option B**: Use Supabase REST API via `supabase-js` client (works over HTTPS/IPv4)
+- **Option C**: Deploy to platform with IPv6 (Vercel, Railway, etc.)
+
+#### "Invalid API key" 
+The anon key is invalid/expired:
+1. Go to Supabase Dashboard → Settings → API
+2. Copy new `anon` `public` key
+3. Update `.env.local`: `NEXT_PUBLIC_SUPABASE_ANON_KEY=new_key`
+4. For server-side scripts, use `service_role` key (keep secret!)
+
+#### RLS / Permission Errors
+- Anon key may lack RPC permissions → Use `service_role` key for server-side scripts
+- Enable RLS policies on `knowledge_base` for anon access if needed
+
 ### Model not found errors
 The system uses `command-r7b-12-2024` (updated from deprecated `command-r-plus`). Update if Cohere deprecates models.
 
@@ -167,8 +186,17 @@ The system uses `command-r7b-12-2024` (updated from deprecated `command-r-plus`)
 
 Create `.env.local` with:
 ```env
+# Required
 COHERE_API_KEY=your_cohere_key
-NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION=postgresql://user:pass@host:5432/db
 NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=xxx
+
+# For direct PostgreSQL (IPv6 only - may not work on all networks)
+NEXT_PUBLIC_SUPABASE__DIRECT_CONNECTION=postgresql://user:pass@host:5432/db
+
+# For server-side scripts (ingestion, admin) - keep secret!
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+
+# Pooler connection (IPv4) - enable in Supabase Dashboard first
+# NEXT_PUBLIC_SUPABASE__POOLER_CONNECTION=postgresql://user:pass@host:6543/db
 ```
