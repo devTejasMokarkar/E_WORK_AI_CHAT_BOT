@@ -90,20 +90,32 @@ function handleBack(currentMenu: MenuState, store: ReturnType<typeof useChatStor
     case 'ASK_CHATBOT':
     case 'EWORK_INFO':
     case 'WORK_STATUS':
+    case 'AWAITING_WORK_ID':
     case 'ASK_AI':
       store.setMenu('MAIN_MENU');
       return getWelcomeMessage();
     case 'WORK_DETAILS':
-      if (store.session.isRegistered) {
-        store.setMenu('EWORK_INFO');
-      } else {
-        store.setMenu('MAIN_MENU');
-      }
-      return 'Select an option:\n1. Work Status\n2. Ask e-Work AI\n3. Main Menu';
+      store.setMenu('MAIN_MENU');
+      return getWelcomeMessage();
     default:
       store.setMenu('WORK_DETAILS');
       return getWorkDetailsMenu();
   }
+}
+
+function printAskChatbotMenu(): string {
+  return `Registration is not required for this option.
+
+Supported questions:
+- Voucher forward नहीं हो रहा है।
+- How can I generate an FTO?
+- Estimate approve कैसे करें?
+- UC generate नहीं हो रही है।
+- Final MB कैसे बनाएं?
+- Vendor list में दिखाई नहीं दे रहा है।
+- Work proposal submit नहीं हो रहा है。
+
+Ask your question (or type "back" to return to main menu):`;
 }
 
 async function handleMainMenu(input: string, store: ReturnType<typeof useChatStore.getState>): Promise<string> {
@@ -112,32 +124,13 @@ async function handleMainMenu(input: string, store: ReturnType<typeof useChatSto
   switch (normalizedInput) {
     case '1':
       store.setMenu('ASK_CHATBOT');
-      return `You can ask questions about common e-Work problems in English, Hindi, or mixed language.
-
-Examples:
-- "Voucher forward नहीं हो रहा है।"
-- "How can I generate an FTO?"
-- "Estimate approve कैसे करें?"
-
-Ask your question (or type "back" to return to main menu):`;
+      return printAskChatbotMenu();
     case '2':
-      store.setMenu('EWORK_INFO');
-      // For now, we'll simulate registration check based on a demo mobile number
-      // In production, this would capture the user's WhatsApp number
-      const demoMobile = '+919999999999';
-      store.setMobileNumber(demoMobile);
-      
-      const user = await checkUserRegistration(demoMobile);
-      
-      if (user) {
-        store.setUser(user);
-        store.setRegistered(true);
-        return getRegisteredUserMenu(user);
-      } else {
-        store.setUser(null);
-        store.setRegistered(false);
-        return getUnregisteredUserMessage();
-      }
+      store.setMenu('AWAITING_WORK_ID');
+      return `Please enter the Work ID.
+
+Example:
+2026-27/3333`;
     default:
       return 'Invalid option. Please select 1 or 2.';
   }
@@ -172,36 +165,45 @@ Select an option:
 async function handleAskChatbot(input: string, session: ChatSession, store: ReturnType<typeof useChatStore.getState>): Promise<string> {
   const normalizedInput = input.trim().toLowerCase();
   
-  // Handle greetings in ASK_CHATBOT mode
-  if (GREETING_PATTERNS.test(normalizedInput)) {
-    return `Welcome to the e-Work Chatbot! You can ask questions about e-Work in English, Hindi, or mixed language.
+  const supportedQuestions = [
+    "Voucher forward नहीं हो रहा है।",
+    "How can I generate an FTO?",
+    "Estimate approve कैसे करें?",
+    "UC generate नहीं हो रही है。",
+    "Final MB कैसे बनाएं?",
+    "Vendor list में दिखाई नहीं दे रहा है。",
+    "Work proposal submit नहीं हो रहा है。"
+  ];
 
-Examples:
-- "Voucher forward नहीं हो रहा है।"
-- "How can I generate an FTO?"
-- "Estimate approve कैसे करें?"
-- "What is eWork?"
-- "How does the workflow work?"
-
-Ask your question (or type "back" to return to main menu):`;
+  let queryToSearch = input;
+  
+  if (/^[1-7]$/.test(normalizedInput)) {
+    queryToSearch = supportedQuestions[parseInt(normalizedInput) - 1];
+  } else if (normalizedInput.length < 3) {
+    return `Please provide a longer question so I can search the knowledge base effectively.\n\n${printAskChatbotMenu()}`;
   }
+
+  const searchInputLower = queryToSearch.toLowerCase();
 
   // Use RAG to search knowledge base and generate answer
   try {
-    const context = await getContextForQuery(input);
-    const language = detectLanguage(input);
+    const results = await searchKnowledgeBase(queryToSearch, 3);
+    if (results.length === 0) {
+      return `I could not find an appropriate solution for this problem.\nPlease contact the e-Work Help Desk for further assistance.\n\n${printAskChatbotMenu()}`;
+    }
     
-    // Get conversation history for context
+    const context = results.map((r, i) => `[Source ${i+1}: ${r.source}]\n${r.content}`).join('\n\n---\n\n');
+    
     const conversationHistory = session.messages
       .filter(m => m.role === 'user' || m.role === 'assistant')
       .slice(-5)
-      .map(m => ({ role: m.role, text: m.content }));
+      .map(m => ({ role: m.role as "user"|"assistant", text: m.content }));
     
-    const response = await generateChatCompletion(input, context, conversationHistory);
-    return response;
+    const response = await generateChatCompletion(queryToSearch, context, conversationHistory);
+    return `${response}\n\n${printAskChatbotMenu()}`;
   } catch (error) {
     console.error('Error in handleAskChatbot:', error);
-    return `I encountered an error while searching the knowledge base. Please try again or contact the e-Work Help Desk for further assistance.`;
+    return `I encountered an error while searching the knowledge base. Please try again or contact the e-Work Help Desk for further assistance.\n\n${printAskChatbotMenu()}`;
   }
 }
 

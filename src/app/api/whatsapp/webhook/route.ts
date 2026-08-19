@@ -79,64 +79,87 @@ async function sendWhatsAppMessage(to: string, message: string) {
   }
 }
 
-function handleIncomingMessage(from: string, messageBody: string): string {
-  const normalizedInput = messageBody.trim().toLowerCase();
-  
-  const GREETING_PATTERNS = /^(hi|hello|start|namaste|नमस्ते|hey|hi there)$/i;
-  
-  if (GREETING_PATTERNS.test(normalizedInput)) {
-    return `Welcome to the e-Work WhatsApp Assistant.
+import { processUserInput } from '@/lib/chatbot';
+import { useChatStore } from '@/store/chatStore';
 
-Please select an option:
-1. Ask e-Work Chatbot
-2. e-Work Information`;
+// Server-side session store for WhatsApp
+const sessionStore = new Map<string, any>();
+
+function createSessionState(session: any) {
+  return {
+    session: {
+      id: session.id,
+      mobileNumber: session.mobileNumber,
+      user: session.user,
+      isRegistered: session.isRegistered,
+      messages: session.messages,
+      currentMenu: session.currentMenu,
+      context: session.context,
+    },
+    setMenu: (menu: string) => {
+      session.currentMenu = menu;
+      sessionStore.set(session.id, session);
+    },
+    setMobileNumber: (mobile: string) => {
+      session.mobileNumber = mobile;
+      sessionStore.set(session.id, session);
+    },
+    setUser: (user: any) => {
+      session.user = user;
+      session.isRegistered = !!user;
+      sessionStore.set(session.id, session);
+    },
+    setWork: (work: any) => {
+      session.context.workId = work.work_id;
+      sessionStore.set(session.id, session);
+    },
+    addMessage: (message: any) => {
+      session.messages.push(message);
+      sessionStore.set(session.id, session);
+    },
+    clearMessages: () => {
+      session.messages = [];
+      sessionStore.set(session.id, session);
+    },
+  };
+}
+
+async function handleIncomingMessage(from: string, messageBody: string): Promise<string> {
+  const sid = 'whatsapp-' + from;
+  let session = sessionStore.get(sid);
+  
+  if (!session) {
+    session = {
+      id: sid,
+      currentMenu: 'MAIN_MENU',
+      context: { workId: null },
+      user: null,
+      isRegistered: false,
+      mobileNumber: from,
+      messages: []
+    };
+    sessionStore.set(sid, session);
   }
 
-  switch (normalizedInput) {
-    case '1':
-      return `You can ask questions about common e-Work problems in English, Hindi, or mixed language.
+  const storeState = createSessionState(session);
 
-Examples:
-- "Voucher forward नहीं हो रहा है।"
-- "How can I generate an FTO?"
-- "Estimate approve कैसे करें?"
+  const response = await processUserInput(messageBody, {
+    id: session.id,
+    mobileNumber: session.mobileNumber,
+    user: session.user,
+    isRegistered: session.isRegistered,
+    messages: session.messages,
+    currentMenu: session.currentMenu,
+    context: session.context,
+  }, storeState);
 
-Ask your question (or type "back" to return to main menu):`;
-    case '2':
-      return `Welcome, Demo User
-Role: District User
-District: Jaipur
+  session.messages.push(
+    { id: Date.now().toString(), role: 'user', content: messageBody, timestamp: Date.now() },
+    { id: (Date.now() + 1).toString(), role: 'assistant', content: response, timestamp: Date.now() + 1 }
+  );
+  sessionStore.set(sid, session);
 
-Please select an option:
-1. Work Status
-2. Ask e-Work AI
-3. Main Menu`;
-    case 'back':
-    case '0':
-    case 'exit':
-      return `Welcome to the e-Work WhatsApp Assistant.
-
-Please select an option:
-1. Ask e-Work Chatbot
-2. e-Work Information`;
-    default:
-      const mockAnswers: Record<string, string> = {
-        'voucher forward': 'Please verify the following:\n1. The voucher is approved by the maker.\n2. The checker role is properly mapped.\n3. The voucher has not already been forwarded.\n4. All mandatory documents are uploaded.\n5. The voucher amount is within the available MB amount.',
-        'fto': 'To generate an FTO:\n1. Ensure the voucher is approved.\n2. Go to Payment Module > FTO Generation.\n3. Select the voucher and click "Generate FTO".\n4. Verify the details and submit.',
-        'estimate approve': 'To approve an estimate:\n1. Login as Technical Sanction authority.\n2. Go to Works > Estimate Approval.\n3. Select the work and review the estimate.\n4. Click "Approve" or "Reject" with comments.',
-        'payment pending': 'Payment may be pending due to:\n1. FTO not yet generated\n2. FTO under processing in IFMS\n3. Bank details not updated\n4. Payment rejected by IFMS\n\nPlease check the FTO status in the Payment module.',
-      };
-
-      for (const [key, answer] of Object.entries(mockAnswers)) {
-        if (normalizedInput.includes(key)) {
-          return answer;
-        }
-      }
-
-      return `I could not find an appropriate solution for this problem.
-
-Please contact the e-Work Help Desk for further assistance.`;
-  }
+  return response;
 }
 
 export async function POST(request: NextRequest) {
@@ -167,7 +190,7 @@ export async function POST(request: NextRequest) {
 
                 if (messageBody && messageId) {
                   await markAsRead(messageId);
-                  const response = handleIncomingMessage(from, messageBody);
+                  const response = await handleIncomingMessage(from, messageBody);
                   await sendWhatsAppMessage(from, response);
                 }
               }
