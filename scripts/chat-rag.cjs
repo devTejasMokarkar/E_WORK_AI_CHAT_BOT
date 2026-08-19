@@ -308,18 +308,6 @@ async function main() {
         
         const searchInputLower = queryToSearch.toLowerCase();
 
-        // Exact match fallback from requirements
-        if (searchInputLower.includes('voucher forward') && searchInputLower.includes('नहीं')) {
-          console.log(`${colors.green}Assistant:${colors.reset} Please verify the following:
-1. The voucher is approved by the maker.
-2. The checker role is properly mapped.
-3. The voucher has not already been forwarded.
-4. All mandatory documents are uploaded.
-5. The voucher amount is within the available MB amount.\n`);
-          printAskChatbotMenu();
-          break;
-        }
-
         console.log(`${colors.yellow}Searching knowledge base...${colors.reset}`);
         try {
           const results = await searchKnowledgeBase(queryToSearch, TOP_K);

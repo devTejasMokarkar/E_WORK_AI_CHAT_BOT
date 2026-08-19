@@ -37,7 +37,7 @@ export function chunkText(text: string, chunkSize: number = 500, overlap: number
 /**
  * Search the knowledge base using semantic similarity
  */
-export async function searchKnowledgeBase(query: string, topK: number = 3): Promise<RAGResult[]> {
+export async function searchKnowledgeBase(query: string, topK: number = 5): Promise<RAGResult[]> {
   try {
     // Generate embedding for the query
     const queryEmbedding = await generateQueryEmbedding(query);
@@ -48,7 +48,7 @@ export async function searchKnowledgeBase(query: string, topK: number = 3): Prom
     const { data: documents, error } = await supabase
       .rpc('match_documents', {
         query_embedding: embeddingStr,
-        match_threshold: 0.5,
+        match_threshold: 0.3,
         match_count: topK,
       });
     
@@ -62,9 +62,9 @@ export async function searchKnowledgeBase(query: string, topK: number = 3): Prom
       return [];
     }
     
-    return documents.map(doc => ({
+    return documents.map((doc: { content: string; similarity: string | number; source?: string; category?: string }) => ({
       content: doc.content,
-      similarity: doc.similarity,
+      similarity: typeof doc.similarity === 'string' ? parseFloat(doc.similarity) : doc.similarity,
       source: doc.source || doc.category || 'unknown',
     }));
   } catch (error) {
@@ -84,13 +84,16 @@ async function fallbackKeywordSearch(query: string, topK: number): Promise<RAGRe
   
   const results: Array<{ doc: typeof documents[0]; score: number }> = [];
   
+  const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+  
   for (const doc of documents) {
-    const queryWords = query.toLowerCase().split(/\s+/);
-    const docWords = doc.content.toLowerCase().split(/\s+/);
+    const docContent = doc.content.toLowerCase();
     
     let matches = 0;
     for (const qw of queryWords) {
-      if (qw.length > 3 && docWords.some(dw => dw.includes(qw))) {
+      // Check for exact word boundary match or substring match for short words
+      const wordRegex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      if (docContent.match(wordRegex) || (qw.length <= 4 && docContent.includes(qw))) {
         matches++;
       }
     }

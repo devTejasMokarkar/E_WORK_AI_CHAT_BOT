@@ -24,9 +24,14 @@ export async function generateEmbedding(text: string): Promise<number[]> {
   });
   
   // Handle different response shapes
-  const embeddings = (response as { embeddings?: number[][] }).embeddings;
+  const embeddings = (response as any).embeddings;
   if (Array.isArray(embeddings) && Array.isArray(embeddings[0])) {
     return embeddings[0];
+  } else if ((response as any).embeddingsByType && (response as any).embeddingsByType.float) {
+    const floatEmbeddings = (response as any).embeddingsByType.float;
+    if (Array.isArray(floatEmbeddings) && Array.isArray(floatEmbeddings[0])) {
+      return floatEmbeddings[0];
+    }
   }
   return [];
 }
@@ -41,9 +46,14 @@ export async function generateQueryEmbedding(text: string): Promise<number[]> {
     inputType: 'search_query',
   });
   
-  const embeddings = (response as { embeddings?: number[][] }).embeddings;
+  const embeddings = (response as any).embeddings;
   if (Array.isArray(embeddings) && Array.isArray(embeddings[0])) {
     return embeddings[0];
+  } else if ((response as any).embeddingsByType && (response as any).embeddingsByType.float) {
+    const floatEmbeddings = (response as any).embeddingsByType.float;
+    if (Array.isArray(floatEmbeddings) && Array.isArray(floatEmbeddings[0])) {
+      return floatEmbeddings[0];
+    }
   }
   return [];
 }
