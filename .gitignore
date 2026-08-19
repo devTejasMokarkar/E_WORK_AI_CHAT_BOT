@@ -32,6 +32,17 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
+.env.production
+
+# uploads (PDFs, user files)
+/uploads/
+
+# cloudflare tunnel
+cloudflared-linux-amd64.deb
+
+# graphify cache
+graphify-out/cache/
 
 # vercel
 .vercel

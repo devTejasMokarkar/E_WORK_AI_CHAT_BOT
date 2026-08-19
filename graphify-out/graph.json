@@ -1,0 +1,4586 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "test-terminal.js",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L1",
+      "id": "test_terminal_js",
+      "community": 4,
+      "norm_label": "test-terminal.js"
+    },
+    {
+      "label": "readline",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L9",
+      "id": "ework_chatbot_test_terminal_readline",
+      "community": 4,
+      "norm_label": "readline"
+    },
+    {
+      "label": "colors",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L18",
+      "id": "ework_chatbot_test_terminal_colors",
+      "community": 4,
+      "norm_label": "colors"
+    },
+    {
+      "label": "rl",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L30",
+      "id": "ework_chatbot_test_terminal_rl",
+      "community": 4,
+      "norm_label": "rl"
+    },
+    {
+      "label": "conversationHistory",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L38",
+      "id": "ework_chatbot_test_terminal_conversationhistory",
+      "community": 4,
+      "norm_label": "conversationhistory"
+    },
+    {
+      "label": "makeRequest()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L61",
+      "id": "ework_chatbot_test_terminal_makerequest",
+      "community": 4,
+      "norm_label": "makerequest()"
+    },
+    {
+      "label": "chatWithBot()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L107",
+      "id": "ework_chatbot_test_terminal_chatwithbot",
+      "community": 4,
+      "norm_label": "chatwithbot()"
+    },
+    {
+      "label": "checkHealth()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L168",
+      "id": "ework_chatbot_test_terminal_checkhealth",
+      "community": 4,
+      "norm_label": "checkhealth()"
+    },
+    {
+      "label": "formatResponse()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L195",
+      "id": "ework_chatbot_test_terminal_formatresponse",
+      "community": 4,
+      "norm_label": "formatresponse()"
+    },
+    {
+      "label": "showSessionInfo()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L201",
+      "id": "ework_chatbot_test_terminal_showsessioninfo",
+      "community": 4,
+      "norm_label": "showsessioninfo()"
+    },
+    {
+      "label": "showConversationHistory()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L209",
+      "id": "ework_chatbot_test_terminal_showconversationhistory",
+      "community": 4,
+      "norm_label": "showconversationhistory()"
+    },
+    {
+      "label": "handleCommand()",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L239",
+      "id": "ework_chatbot_test_terminal_handlecommand",
+      "community": 4,
+      "norm_label": "handlecommand()"
+    },
+    {
+      "label": "trimmedInput",
+      "file_type": "code",
+      "source_file": "test-terminal.js",
+      "source_location": "L299",
+      "id": "ework_chatbot_test_terminal_trimmedinput",
+      "community": 4,
+      "norm_label": "trimmedinput"
+    },
+    {
+      "label": "jest.config.ts",
+      "file_type": "code",
+      "source_file": "jest.config.ts",
+      "source_location": "L1",
+      "id": "jest_config_ts",
+      "community": 11,
+      "norm_label": "jest.config.ts"
+    },
+    {
+      "label": "createJestConfig",
+      "file_type": "code",
+      "source_file": "jest.config.ts",
+      "source_location": "L4",
+      "id": "ework_chatbot_jest_config_createjestconfig",
+      "community": 11,
+      "norm_label": "createjestconfig"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "jest.config.ts",
+      "source_location": "L8",
+      "id": "ework_chatbot_jest_config_config",
+      "community": 11,
+      "norm_label": "config"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "id": "next_config_ts",
+      "community": 12,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1",
+      "id": "tailwind_config_js",
+      "community": 13,
+      "norm_label": "tailwind.config.js"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "next-env.d.ts",
+      "source_location": "L1",
+      "id": "next_env_d_ts",
+      "community": 14,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "jest.setup.ts",
+      "file_type": "code",
+      "source_file": "jest.setup.ts",
+      "source_location": "L1",
+      "id": "jest_setup_ts",
+      "community": 15,
+      "norm_label": "jest.setup.ts"
+    },
+    {
+      "label": "test-cli.js",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L1",
+      "id": "test_cli_js",
+      "community": 8,
+      "norm_label": "test-cli.js"
+    },
+    {
+      "label": "http",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L17",
+      "id": "ework_chatbot_test_cli_http",
+      "community": 4,
+      "norm_label": "http"
+    },
+    {
+      "label": "testHealth()",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L22",
+      "id": "ework_chatbot_test_cli_testhealth",
+      "community": 8,
+      "norm_label": "testhealth()"
+    },
+    {
+      "label": "testChat()",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L76",
+      "id": "ework_chatbot_test_cli_testchat",
+      "community": 8,
+      "norm_label": "testchat()"
+    },
+    {
+      "label": "testRag()",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L135",
+      "id": "ework_chatbot_test_cli_testrag",
+      "community": 8,
+      "norm_label": "testrag()"
+    },
+    {
+      "label": "testWorks()",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L185",
+      "id": "ework_chatbot_test_cli_testworks",
+      "community": 8,
+      "norm_label": "testworks()"
+    },
+    {
+      "label": "runTests()",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L225",
+      "id": "ework_chatbot_test_cli_runtests",
+      "community": 8,
+      "norm_label": "runtests()"
+    },
+    {
+      "label": "args",
+      "file_type": "code",
+      "source_file": "test-cli.js",
+      "source_location": "L269",
+      "id": "ework_chatbot_test_cli_args",
+      "community": 8,
+      "norm_label": "args"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "id": "eslint_config_mjs",
+      "community": 16,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_mjs",
+      "community": 11,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "store.test.ts",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L1",
+      "id": "src_tests_store_test_ts",
+      "community": 5,
+      "norm_label": "store.test.ts"
+    },
+    {
+      "label": "{ addMessage }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L29",
+      "id": "tests_store_test_addmessage",
+      "community": 5,
+      "norm_label": "{ addmessage }"
+    },
+    {
+      "label": "before",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L52",
+      "id": "tests_store_test_before",
+      "community": 5,
+      "norm_label": "before"
+    },
+    {
+      "label": "after",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L56",
+      "id": "tests_store_test_after",
+      "community": 5,
+      "norm_label": "after"
+    },
+    {
+      "label": "{ setMobileNumber }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L66",
+      "id": "tests_store_test_setmobilenumber",
+      "community": 5,
+      "norm_label": "{ setmobilenumber }"
+    },
+    {
+      "label": "{ setUser }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L76",
+      "id": "tests_store_test_setuser",
+      "community": 5,
+      "norm_label": "{ setuser }"
+    },
+    {
+      "label": "user",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L77",
+      "id": "tests_store_test_user",
+      "community": 5,
+      "norm_label": "user"
+    },
+    {
+      "label": "{ setRegistered }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L110",
+      "id": "tests_store_test_setregistered",
+      "community": 5,
+      "norm_label": "{ setregistered }"
+    },
+    {
+      "label": "{ setMenu }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L122",
+      "id": "tests_store_test_setmenu",
+      "community": 5,
+      "norm_label": "{ setmenu }"
+    },
+    {
+      "label": "{ setContext }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L134",
+      "id": "tests_store_test_setcontext",
+      "community": 5,
+      "norm_label": "{ setcontext }"
+    },
+    {
+      "label": "{ setContext, clearContext }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L147",
+      "id": "tests_store_test_setcontext_clearcontext",
+      "community": 5,
+      "norm_label": "{ setcontext, clearcontext }"
+    },
+    {
+      "label": "{ addMessage, setMobileNumber, resetSession }",
+      "file_type": "code",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L158",
+      "id": "tests_store_test_addmessage_setmobilenumber_resetsession",
+      "community": 5,
+      "norm_label": "{ addmessage, setmobilenumber, resetsession }"
+    },
+    {
+      "label": "types.test.ts",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L1",
+      "id": "src_tests_types_test_ts",
+      "community": 0,
+      "norm_label": "types.test.ts"
+    },
+    {
+      "label": "validRoles",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L21",
+      "id": "tests_types_test_validroles",
+      "community": 0,
+      "norm_label": "validroles"
+    },
+    {
+      "label": "validLevels",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L32",
+      "id": "tests_types_test_validlevels",
+      "community": 0,
+      "norm_label": "validlevels"
+    },
+    {
+      "label": "validStatuses",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L44",
+      "id": "tests_types_test_validstatuses",
+      "community": 0,
+      "norm_label": "validstatuses"
+    },
+    {
+      "label": "validTypes",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L59",
+      "id": "tests_types_test_validtypes",
+      "community": 0,
+      "norm_label": "validtypes"
+    },
+    {
+      "label": "requiredMenus",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L102",
+      "id": "tests_types_test_requiredmenus",
+      "community": 0,
+      "norm_label": "requiredmenus"
+    },
+    {
+      "label": "session",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L128",
+      "id": "tests_types_test_session",
+      "community": 0,
+      "norm_label": "session"
+    },
+    {
+      "label": "result",
+      "file_type": "code",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L146",
+      "id": "tests_types_test_result",
+      "community": 0,
+      "norm_label": "result"
+    },
+    {
+      "label": "menuMap",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L32",
+      "id": "tests_chatbot_test_menumap",
+      "community": 1,
+      "norm_label": "menumap"
+    },
+    {
+      "label": "subMenus",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L56",
+      "id": "tests_chatbot_test_submenus",
+      "community": 1,
+      "norm_label": "submenus"
+    },
+    {
+      "label": "mockAnswers",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L143",
+      "id": "tests_chatbot_test_mockanswers",
+      "community": 1,
+      "norm_label": "mockanswers"
+    },
+    {
+      "label": "options",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L183",
+      "id": "tests_chatbot_test_options",
+      "community": 1,
+      "norm_label": "options"
+    },
+    {
+      "label": "validOptions",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L184",
+      "id": "tests_chatbot_test_validoptions",
+      "community": 1,
+      "norm_label": "validoptions"
+    },
+    {
+      "label": "invalidOptions",
+      "file_type": "code",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L192",
+      "id": "tests_chatbot_test_invalidoptions",
+      "community": 1,
+      "norm_label": "invalidoptions"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L1",
+      "id": "src_app_page_tsx",
+      "community": 0,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L3",
+      "id": "app_page_home",
+      "community": 0,
+      "norm_label": "home()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L1",
+      "id": "src_app_layout_tsx",
+      "community": 9,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "geistSans",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "id": "app_layout_geistsans",
+      "community": 9,
+      "norm_label": "geistsans"
+    },
+    {
+      "label": "geistMono",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L10",
+      "id": "app_layout_geistmono",
+      "community": 9,
+      "norm_label": "geistmono"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L15",
+      "id": "app_layout_metadata",
+      "community": 9,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20",
+      "id": "app_layout_rootlayout",
+      "community": 9,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L1",
+      "id": "src_app_api_chat_route_ts",
+      "community": 6,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "sessionStore",
+      "file_type": "code",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L6",
+      "id": "chat_route_sessionstore",
+      "community": 6,
+      "norm_label": "sessionstore"
+    },
+    {
+      "label": "createSessionState()",
+      "file_type": "code",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L9",
+      "id": "chat_route_createsessionstate",
+      "community": 6,
+      "norm_label": "createsessionstate()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L48",
+      "id": "chat_route_post",
+      "community": 6,
+      "norm_label": "post()"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "src/app/api/health/route.ts",
+      "source_location": "L3",
+      "id": "health_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "markAsRead()",
+      "file_type": "code",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L23",
+      "id": "webhook_route_markasread",
+      "community": 6,
+      "norm_label": "markasread()"
+    },
+    {
+      "label": "handleIncomingMessage()",
+      "file_type": "code",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L82",
+      "id": "webhook_route_handleincomingmessage",
+      "community": 6,
+      "norm_label": "handleincomingmessage()"
+    },
+    {
+      "label": "TerminalChat.tsx",
+      "file_type": "code",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L1",
+      "id": "src_components_terminalchat_tsx",
+      "community": 0,
+      "norm_label": "terminalchat.tsx"
+    },
+    {
+      "label": "MENU_OPTIONS",
+      "file_type": "code",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L9",
+      "id": "components_terminalchat_menu_options",
+      "community": 0,
+      "norm_label": "menu_options"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L1",
+      "id": "src_types_index_ts",
+      "community": 0,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "EworkUser",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L6",
+      "id": "types_index_eworkuser",
+      "community": 0,
+      "norm_label": "eworkuser"
+    },
+    {
+      "label": "UserRole",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L23",
+      "id": "types_index_userrole",
+      "community": 0,
+      "norm_label": "userrole"
+    },
+    {
+      "label": "UserLevel",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L24",
+      "id": "types_index_userlevel",
+      "community": 0,
+      "norm_label": "userlevel"
+    },
+    {
+      "label": "UserStatus",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L25",
+      "id": "types_index_userstatus",
+      "community": 0,
+      "norm_label": "userstatus"
+    },
+    {
+      "label": "Work",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L28",
+      "id": "types_index_work",
+      "community": 0,
+      "norm_label": "work"
+    },
+    {
+      "label": "WorkStatus",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L44",
+      "id": "types_index_workstatus",
+      "community": 0,
+      "norm_label": "workstatus"
+    },
+    {
+      "label": "Sanction",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L54",
+      "id": "types_index_sanction",
+      "community": 0,
+      "norm_label": "sanction"
+    },
+    {
+      "label": "MeasurementBook",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L66",
+      "id": "types_index_measurementbook",
+      "community": 0,
+      "norm_label": "measurementbook"
+    },
+    {
+      "label": "Voucher",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L77",
+      "id": "types_index_voucher",
+      "community": 0,
+      "norm_label": "voucher"
+    },
+    {
+      "label": "FTO",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L90",
+      "id": "types_index_fto",
+      "community": 0,
+      "norm_label": "fto"
+    },
+    {
+      "label": "UtilizationCertificate",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L104",
+      "id": "types_index_utilizationcertificate",
+      "community": 0,
+      "norm_label": "utilizationcertificate"
+    },
+    {
+      "label": "CompletionCertificate",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L115",
+      "id": "types_index_completioncertificate",
+      "community": 0,
+      "norm_label": "completioncertificate"
+    },
+    {
+      "label": "WorkPhoto",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L126",
+      "id": "types_index_workphoto",
+      "community": 0,
+      "norm_label": "workphoto"
+    },
+    {
+      "label": "AuditLog",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L137",
+      "id": "types_index_auditlog",
+      "community": 0,
+      "norm_label": "auditlog"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L149",
+      "id": "types_index_chatmessage",
+      "community": 0,
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "ChatSession",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L156",
+      "id": "types_index_chatsession",
+      "community": 0,
+      "norm_label": "chatsession"
+    },
+    {
+      "label": "MenuState",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L170",
+      "id": "types_index_menustate",
+      "community": 0,
+      "norm_label": "menustate"
+    },
+    {
+      "label": "RAGDocument",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L193",
+      "id": "types_index_ragdocument",
+      "community": 0,
+      "norm_label": "ragdocument"
+    },
+    {
+      "label": "RAGResult",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L203",
+      "id": "types_index_ragresult",
+      "community": 0,
+      "norm_label": "ragresult"
+    },
+    {
+      "label": "AIQueryResult",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": "L210",
+      "id": "types_index_aiqueryresult",
+      "community": 0,
+      "norm_label": "aiqueryresult"
+    },
+    {
+      "label": "chatStore.ts",
+      "file_type": "code",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L1",
+      "id": "src_store_chatstore_ts",
+      "community": 0,
+      "norm_label": "chatstore.ts"
+    },
+    {
+      "label": "createInitialSession()",
+      "file_type": "code",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L31",
+      "id": "store_chatstore_createinitialsession",
+      "community": 0,
+      "norm_label": "createinitialsession()"
+    },
+    {
+      "label": "useChatStore",
+      "file_type": "code",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L41",
+      "id": "store_chatstore_usechatstore",
+      "community": 0,
+      "norm_label": "usechatstore"
+    },
+    {
+      "label": "chatbot.ts",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L1",
+      "id": "src_lib_chatbot_ts",
+      "community": 1,
+      "norm_label": "chatbot.ts"
+    },
+    {
+      "label": "formatCurrency()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L14",
+      "id": "lib_chatbot_formatcurrency",
+      "community": 3,
+      "norm_label": "formatcurrency()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L23",
+      "id": "lib_chatbot_formatdate",
+      "community": 3,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "processUserInput()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L33",
+      "id": "lib_chatbot_processuserinput",
+      "community": 7,
+      "norm_label": "processuserinput()"
+    },
+    {
+      "label": "getWelcomeMessage()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L80",
+      "id": "lib_chatbot_getwelcomemessage",
+      "community": 7,
+      "norm_label": "getwelcomemessage()"
+    },
+    {
+      "label": "handleBack()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L88",
+      "id": "lib_chatbot_handleback",
+      "community": 7,
+      "norm_label": "handleback()"
+    },
+    {
+      "label": "handleMainMenu()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L109",
+      "id": "lib_chatbot_handlemainmenu",
+      "community": 1,
+      "norm_label": "handlemainmenu()"
+    },
+    {
+      "label": "getRegisteredUserMenu()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L146",
+      "id": "lib_chatbot_getregisteredusermenu",
+      "community": 1,
+      "norm_label": "getregisteredusermenu()"
+    },
+    {
+      "label": "getUnregisteredUserMessage()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L157",
+      "id": "lib_chatbot_getunregisteredusermessage",
+      "community": 1,
+      "norm_label": "getunregisteredusermessage()"
+    },
+    {
+      "label": "handleAskChatbot()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L172",
+      "id": "lib_chatbot_handleaskchatbot",
+      "community": 2,
+      "norm_label": "handleaskchatbot()"
+    },
+    {
+      "label": "handleEworkInfo()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L208",
+      "id": "lib_chatbot_handleeworkinfo",
+      "community": 7,
+      "norm_label": "handleeworkinfo()"
+    },
+    {
+      "label": "handleWorkStatus()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L230",
+      "id": "lib_chatbot_handleworkstatus",
+      "community": 7,
+      "norm_label": "handleworkstatus()"
+    },
+    {
+      "label": "getWorkDetailsMenu()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L254",
+      "id": "lib_chatbot_getworkdetailsmenu",
+      "community": 7,
+      "norm_label": "getworkdetailsmenu()"
+    },
+    {
+      "label": "getWorkDetailsDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L274",
+      "id": "lib_chatbot_getworkdetailsdisplay",
+      "community": 7,
+      "norm_label": "getworkdetailsdisplay()"
+    },
+    {
+      "label": "handleWorkDetails()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L288",
+      "id": "lib_chatbot_handleworkdetails",
+      "community": 3,
+      "norm_label": "handleworkdetails()"
+    },
+    {
+      "label": "getSanctionsDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L364",
+      "id": "lib_chatbot_getsanctionsdisplay",
+      "community": 3,
+      "norm_label": "getsanctionsdisplay()"
+    },
+    {
+      "label": "getEstimateDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L382",
+      "id": "lib_chatbot_getestimatedisplay",
+      "community": 3,
+      "norm_label": "getestimatedisplay()"
+    },
+    {
+      "label": "getWorkProgressDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L392",
+      "id": "lib_chatbot_getworkprogressdisplay",
+      "community": 3,
+      "norm_label": "getworkprogressdisplay()"
+    },
+    {
+      "label": "getWorkPhotosDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L402",
+      "id": "lib_chatbot_getworkphotosdisplay",
+      "community": 1,
+      "norm_label": "getworkphotosdisplay()"
+    },
+    {
+      "label": "getMBDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L425",
+      "id": "lib_chatbot_getmbdisplay",
+      "community": 1,
+      "norm_label": "getmbdisplay()"
+    },
+    {
+      "label": "getFTODisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L471",
+      "id": "lib_chatbot_getftodisplay",
+      "community": 3,
+      "norm_label": "getftodisplay()"
+    },
+    {
+      "label": "getPaymentDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L494",
+      "id": "lib_chatbot_getpaymentdisplay",
+      "community": 3,
+      "norm_label": "getpaymentdisplay()"
+    },
+    {
+      "label": "getUCDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L521",
+      "id": "lib_chatbot_getucdisplay",
+      "community": 3,
+      "norm_label": "getucdisplay()"
+    },
+    {
+      "label": "getCCDisplay()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L542",
+      "id": "lib_chatbot_getccdisplay",
+      "community": 3,
+      "norm_label": "getccdisplay()"
+    },
+    {
+      "label": "handleAskAI()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L563",
+      "id": "lib_chatbot_handleaskai",
+      "community": 10,
+      "norm_label": "handleaskai()"
+    },
+    {
+      "label": "handleWorkSubMenu()",
+      "file_type": "code",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L636",
+      "id": "lib_chatbot_handleworksubmenu",
+      "community": 7,
+      "norm_label": "handleworksubmenu()"
+    },
+    {
+      "label": "whatsapp.ts",
+      "file_type": "code",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L1",
+      "id": "src_lib_whatsapp_ts",
+      "community": 6,
+      "norm_label": "whatsapp.ts"
+    },
+    {
+      "label": "sendWhatsAppMessage()",
+      "file_type": "code",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L1",
+      "id": "lib_whatsapp_sendwhatsappmessage",
+      "community": 6,
+      "norm_label": "sendwhatsappmessage()"
+    },
+    {
+      "label": "sendWhatsAppTemplateMessage()",
+      "file_type": "code",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L46",
+      "id": "lib_whatsapp_sendwhatsapptemplatemessage",
+      "community": 6,
+      "norm_label": "sendwhatsapptemplatemessage()"
+    },
+    {
+      "label": "markMessageAsRead()",
+      "file_type": "code",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L97",
+      "id": "lib_whatsapp_markmessageasread",
+      "community": 6,
+      "norm_label": "markmessageasread()"
+    },
+    {
+      "label": "rag.ts",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L1",
+      "id": "src_lib_rag_ts",
+      "community": 2,
+      "norm_label": "rag.ts"
+    },
+    {
+      "label": "chunkText()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L13",
+      "id": "lib_rag_chunktext",
+      "community": 2,
+      "norm_label": "chunktext()"
+    },
+    {
+      "label": "searchKnowledgeBase()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L40",
+      "id": "lib_rag_searchknowledgebase",
+      "community": 2,
+      "norm_label": "searchknowledgebase()"
+    },
+    {
+      "label": "fallbackKeywordSearch()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L76",
+      "id": "lib_rag_fallbackkeywordsearch",
+      "community": 2,
+      "norm_label": "fallbackkeywordsearch()"
+    },
+    {
+      "label": "getContextForQuery()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L116",
+      "id": "lib_rag_getcontextforquery",
+      "community": 2,
+      "norm_label": "getcontextforquery()"
+    },
+    {
+      "label": "addToKnowledgeBase()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L129",
+      "id": "lib_rag_addtoknowledgebase",
+      "community": 2,
+      "norm_label": "addtoknowledgebase()"
+    },
+    {
+      "label": "getKnowledgeBaseCategories()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L154",
+      "id": "lib_rag_getknowledgebasecategories",
+      "community": 2,
+      "norm_label": "getknowledgebasecategories()"
+    },
+    {
+      "label": "searchByCategory()",
+      "file_type": "code",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L171",
+      "id": "lib_rag_searchbycategory",
+      "community": 2,
+      "norm_label": "searchbycategory()"
+    },
+    {
+      "label": "cohere.ts",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L1",
+      "id": "src_lib_cohere_ts",
+      "community": 2,
+      "norm_label": "cohere.ts"
+    },
+    {
+      "label": "cohere",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L12",
+      "id": "lib_cohere_cohere",
+      "community": 2,
+      "norm_label": "cohere"
+    },
+    {
+      "label": "generateEmbedding()",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L19",
+      "id": "lib_cohere_generateembedding",
+      "community": 2,
+      "norm_label": "generateembedding()"
+    },
+    {
+      "label": "generateQueryEmbedding()",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L37",
+      "id": "lib_cohere_generatequeryembedding",
+      "community": 2,
+      "norm_label": "generatequeryembedding()"
+    },
+    {
+      "label": "generateChatCompletion()",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L54",
+      "id": "lib_cohere_generatechatcompletion",
+      "community": 2,
+      "norm_label": "generatechatcompletion()"
+    },
+    {
+      "label": "detectLanguage()",
+      "file_type": "code",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L102",
+      "id": "lib_cohere_detectlanguage",
+      "community": 2,
+      "norm_label": "detectlanguage()"
+    },
+    {
+      "label": "supabase.ts",
+      "file_type": "code",
+      "source_file": "src/lib/supabase.ts",
+      "source_location": "L1",
+      "id": "src_lib_supabase_ts",
+      "community": 2,
+      "norm_label": "supabase.ts"
+    },
+    {
+      "label": "database.ts",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1",
+      "id": "src_lib_database_ts",
+      "community": 0,
+      "norm_label": "database.ts"
+    },
+    {
+      "label": "checkUserRegistration()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L22",
+      "id": "lib_database_checkuserregistration",
+      "community": 1,
+      "norm_label": "checkuserregistration()"
+    },
+    {
+      "label": "getWorkById()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L39",
+      "id": "lib_database_getworkbyid",
+      "community": 7,
+      "norm_label": "getworkbyid()"
+    },
+    {
+      "label": "getSanctions()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L90",
+      "id": "lib_database_getsanctions",
+      "community": 3,
+      "norm_label": "getsanctions()"
+    },
+    {
+      "label": "getMeasurementBooks()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L113",
+      "id": "lib_database_getmeasurementbooks",
+      "community": 1,
+      "norm_label": "getmeasurementbooks()"
+    },
+    {
+      "label": "getVouchers()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L131",
+      "id": "lib_database_getvouchers",
+      "community": 3,
+      "norm_label": "getvouchers()"
+    },
+    {
+      "label": "getFTOs()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L149",
+      "id": "lib_database_getftos",
+      "community": 0,
+      "norm_label": "getftos()"
+    },
+    {
+      "label": "getWorkFTOs()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L167",
+      "id": "lib_database_getworkftos",
+      "community": 3,
+      "norm_label": "getworkftos()"
+    },
+    {
+      "label": "getUtilizationCertificate()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L190",
+      "id": "lib_database_getutilizationcertificate",
+      "community": 3,
+      "norm_label": "getutilizationcertificate()"
+    },
+    {
+      "label": "getCompletionCertificate()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L207",
+      "id": "lib_database_getcompletioncertificate",
+      "community": 3,
+      "norm_label": "getcompletioncertificate()"
+    },
+    {
+      "label": "getWorkPhotos()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L224",
+      "id": "lib_database_getworkphotos",
+      "community": 1,
+      "norm_label": "getworkphotos()"
+    },
+    {
+      "label": "logAudit()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L243",
+      "id": "lib_database_logaudit",
+      "community": 1,
+      "norm_label": "logaudit()"
+    },
+    {
+      "label": "getWorkCountByStatus()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L270",
+      "id": "lib_database_getworkcountbystatus",
+      "community": 10,
+      "norm_label": "getworkcountbystatus()"
+    },
+    {
+      "label": "getTotalPayment()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L298",
+      "id": "lib_database_gettotalpayment",
+      "community": 10,
+      "norm_label": "gettotalpayment()"
+    },
+    {
+      "label": "getPendingFTOCount()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L333",
+      "id": "lib_database_getpendingftocount",
+      "community": 10,
+      "norm_label": "getpendingftocount()"
+    },
+    {
+      "label": "getWorkPaymentSummary()",
+      "file_type": "code",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L368",
+      "id": "lib_database_getworkpaymentsummary",
+      "community": 10,
+      "norm_label": "getworkpaymentsummary()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_readline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_cli_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_rl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_conversationhistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_makerequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_chatwithbot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_checkhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_formatresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_showsessioninfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_showconversationhistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_handlecommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L299",
+      "weight": 1.0,
+      "source": "test_terminal_js",
+      "target": "ework_chatbot_test_terminal_trimmedinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_chatwithbot",
+      "target": "ework_chatbot_test_terminal_makerequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_checkhealth",
+      "target": "ework_chatbot_test_terminal_makerequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_chatwithbot",
+      "target": "ework_chatbot_test_terminal_formatresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L246",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_handlecommand",
+      "target": "ework_chatbot_test_terminal_checkhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_handlecommand",
+      "target": "ework_chatbot_test_terminal_showsessioninfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-terminal.js",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_terminal_handlecommand",
+      "target": "ework_chatbot_test_terminal_showconversationhistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "jest.config.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "jest_config_ts",
+      "target": "ework_chatbot_jest_config_createjestconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "jest.config.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "jest_config_ts",
+      "target": "ework_chatbot_jest_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "postcss_config_mjs",
+      "target": "ework_chatbot_jest_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_testhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_testchat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_testrag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_testworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_runtests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "test_cli_js",
+      "target": "ework_chatbot_test_cli_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_cli_runtests",
+      "target": "ework_chatbot_test_cli_testhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L236",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_cli_runtests",
+      "target": "ework_chatbot_test_cli_testchat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_cli_runtests",
+      "target": "ework_chatbot_test_cli_testrag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test-cli.js",
+      "source_location": "L242",
+      "weight": 1.0,
+      "source": "ework_chatbot_test_cli_runtests",
+      "target": "ework_chatbot_test_cli_testworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "src_store_chatstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "store_chatstore_usechatstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_addmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_before",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_after",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setmobilenumber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setregistered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_setcontext_clearcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/store.test.ts",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "src_tests_store_test_ts",
+      "target": "tests_store_test_addmessage_setmobilenumber_resetsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_sanction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_measurementbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_voucher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_fto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_chatsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_menustate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "types_index_ragresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_validroles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_validlevels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_validstatuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_validtypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_requiredmenus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/types.test.ts",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "src_tests_types_test_ts",
+      "target": "tests_types_test_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_types_test_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_menumap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_submenus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_mockanswers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_validoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/__tests__/chatbot.test.ts",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "tests_chatbot_test_invalidoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_app_page_tsx",
+      "target": "src_components_terminalchat_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_page_tsx",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_layout_tsx",
+      "target": "app_layout_geistsans",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_layout_tsx",
+      "target": "app_layout_geistmono",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_app_layout_tsx",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_app_layout_tsx",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "src_lib_chatbot_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "lib_chatbot_processuserinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "src_store_chatstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "store_chatstore_usechatstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "chat_route_sessionstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "chat_route_createsessionstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "chat_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "health_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "webhook_route_markasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "lib_whatsapp_sendwhatsappmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "src_app_api_chat_route_ts",
+      "target": "webhook_route_handleincomingmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "chat_route_post",
+      "target": "chat_route_createsessionstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "chat_route_post",
+      "target": "webhook_route_markasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "chat_route_post",
+      "target": "webhook_route_handleincomingmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/whatsapp/webhook/route.ts",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "chat_route_post",
+      "target": "lib_whatsapp_sendwhatsappmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/chat/route.ts",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "chat_route_post",
+      "target": "lib_chatbot_processuserinput"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "src_store_chatstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "store_chatstore_usechatstore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "src_lib_chatbot_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "lib_chatbot_processuserinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "types_index_menustate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TerminalChat.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_terminalchat_tsx",
+      "target": "components_terminalchat_menu_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_userrole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_userlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_userstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_workstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_sanction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_measurementbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_voucher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_fto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_utilizationcertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_completioncertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_workphoto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_auditlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_chatsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_menustate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_ragdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_ragresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/index.ts",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "src_types_index_ts",
+      "target": "types_index_aiqueryresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "src_types_index_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_eworkuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "types_index_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "types_index_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_sanction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_measurementbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_voucher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_fto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_utilizationcertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_completioncertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_workphoto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_auditlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "types_index_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "types_index_chatsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "types_index_chatsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "types_index_menustate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "types_index_menustate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "types_index_ragresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "types_index_aiqueryresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "store_chatstore_createinitialsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/chatStore.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_store_chatstore_ts",
+      "target": "store_chatstore_usechatstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "src_store_chatstore_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "store_chatstore_usechatstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import",
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_cohere_detectlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "src_lib_cohere_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_cohere_generatechatcompletion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "src_lib_database_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_checkuserregistration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getworkbyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getsanctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getmeasurementbooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L447",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getvouchers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getworkftos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getutilizationcertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getcompletioncertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getworkphotos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_logaudit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_gettotalpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getworkcountbystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getpendingftocount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_database_getworkpaymentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "src_lib_rag_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_rag_searchknowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_rag_getcontextforquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_processuserinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getwelcomemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handlemainmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getregisteredusermenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getunregisteredusermessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleaskchatbot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleeworkinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleworkstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getworkdetailsmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L274",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getworkdetailsdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleworkdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getsanctionsdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L382",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getestimatedisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L392",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getworkprogressdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L402",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getworkphotosdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L425",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getmbdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L471",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getftodisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L494",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getpaymentdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L521",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getucdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L542",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_getccdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L563",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleaskai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L636",
+      "weight": 1.0,
+      "source": "src_lib_chatbot_ts",
+      "target": "lib_chatbot_handleworksubmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L282",
+      "weight": 1.0,
+      "source": "lib_chatbot_getworkdetailsdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "lib_chatbot_getsanctionsdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L385",
+      "weight": 1.0,
+      "source": "lib_chatbot_getestimatedisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L440",
+      "weight": 1.0,
+      "source": "lib_chatbot_getmbdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L462",
+      "weight": 1.0,
+      "source": "lib_database_getvouchers",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L486",
+      "weight": 1.0,
+      "source": "lib_chatbot_getftodisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L511",
+      "weight": 1.0,
+      "source": "lib_chatbot_getpaymentdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L536",
+      "weight": 1.0,
+      "source": "lib_chatbot_getucdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L557",
+      "weight": 1.0,
+      "source": "lib_chatbot_getccdisplay",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L589",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskai",
+      "target": "lib_chatbot_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L375",
+      "weight": 1.0,
+      "source": "lib_chatbot_getsanctionsdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L397",
+      "weight": 1.0,
+      "source": "lib_chatbot_getworkprogressdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L417",
+      "weight": 1.0,
+      "source": "lib_chatbot_getworkphotosdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L461",
+      "weight": 1.0,
+      "source": "lib_database_getvouchers",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L485",
+      "weight": 1.0,
+      "source": "lib_chatbot_getftodisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L514",
+      "weight": 1.0,
+      "source": "lib_chatbot_getpaymentdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L535",
+      "weight": 1.0,
+      "source": "lib_chatbot_getucdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L556",
+      "weight": 1.0,
+      "source": "lib_chatbot_getccdisplay",
+      "target": "lib_chatbot_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_getwelcomemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handlemainmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleaskchatbot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleeworkinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleworkstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleworkdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleaskai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "lib_chatbot_processuserinput",
+      "target": "lib_chatbot_handleworksubmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleback",
+      "target": "lib_chatbot_getwelcomemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleeworkinfo",
+      "target": "lib_chatbot_getwelcomemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getwelcomemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleback",
+      "target": "lib_chatbot_getworkdetailsmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "lib_chatbot_handlemainmenu",
+      "target": "lib_chatbot_getregisteredusermenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "lib_chatbot_handlemainmenu",
+      "target": "lib_chatbot_getunregisteredusermessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "lib_chatbot_handlemainmenu",
+      "target": "lib_database_checkuserregistration"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L191",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskchatbot",
+      "target": "lib_rag_getcontextforquery"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskchatbot",
+      "target": "lib_cohere_generatechatcompletion"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkstatus",
+      "target": "lib_chatbot_getworkdetailsdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkstatus",
+      "target": "lib_database_getworkbyid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "lib_chatbot_getworkdetailsdisplay",
+      "target": "lib_chatbot_getworkdetailsmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L645",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworksubmenu",
+      "target": "lib_chatbot_getworkdetailsmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L334",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getworkdetailsdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L336",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getsanctionsdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L342",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getestimatedisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getworkprogressdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L346",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getworkphotosdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L348",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getmbdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_database_getvouchers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L352",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getftodisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L354",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getpaymentdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getucdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L358",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_chatbot_getccdisplay",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L649",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworksubmenu",
+      "target": "lib_chatbot_handleworkdetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L297",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleworkdetails",
+      "target": "lib_database_getworkbyid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L365",
+      "weight": 1.0,
+      "source": "lib_chatbot_getsanctionsdisplay",
+      "target": "lib_database_getsanctions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L403",
+      "weight": 1.0,
+      "source": "lib_chatbot_getworkphotosdisplay",
+      "target": "lib_database_getworkphotos"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "lib_chatbot_getmbdisplay",
+      "target": "lib_database_getmeasurementbooks"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L472",
+      "weight": 1.0,
+      "source": "lib_chatbot_getftodisplay",
+      "target": "lib_database_getworkftos"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L495",
+      "weight": 1.0,
+      "source": "lib_chatbot_getpaymentdisplay",
+      "target": "lib_database_getvouchers"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L522",
+      "weight": 1.0,
+      "source": "lib_chatbot_getucdisplay",
+      "target": "lib_database_getutilizationcertificate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L543",
+      "weight": 1.0,
+      "source": "lib_chatbot_getccdisplay",
+      "target": "lib_database_getcompletioncertificate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L575",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskai",
+      "target": "lib_database_getworkcountbystatus"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L584",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskai",
+      "target": "lib_database_gettotalpayment"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L597",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskai",
+      "target": "lib_database_getworkpaymentsummary"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/chatbot.ts",
+      "source_location": "L608",
+      "weight": 1.0,
+      "source": "lib_chatbot_handleaskai",
+      "target": "lib_database_getpendingftocount"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_lib_whatsapp_ts",
+      "target": "lib_whatsapp_sendwhatsappmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_lib_whatsapp_ts",
+      "target": "lib_whatsapp_sendwhatsapptemplatemessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/whatsapp.ts",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "src_lib_whatsapp_ts",
+      "target": "lib_whatsapp_markmessageasread",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "src_lib_cohere_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_cohere_generatequeryembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "src_lib_supabase_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_chunktext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_searchknowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_fallbackkeywordsearch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_getcontextforquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_addtoknowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_getknowledgebasecategories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "src_lib_rag_ts",
+      "target": "lib_rag_searchbycategory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "lib_rag_searchknowledgebase",
+      "target": "lib_rag_fallbackkeywordsearch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "lib_rag_getcontextforquery",
+      "target": "lib_rag_searchknowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/rag.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "lib_rag_searchknowledgebase",
+      "target": "lib_cohere_generatequeryembedding"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_lib_cohere_ts",
+      "target": "lib_cohere_cohere",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_lib_cohere_ts",
+      "target": "lib_cohere_generateembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_lib_cohere_ts",
+      "target": "lib_cohere_generatequeryembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_lib_cohere_ts",
+      "target": "lib_cohere_generatechatcompletion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/cohere.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_lib_cohere_ts",
+      "target": "lib_cohere_detectlanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "src_lib_supabase_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_checkuserregistration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getworkbyid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getsanctions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getmeasurementbooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getvouchers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getftos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getworkftos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getutilizationcertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L207",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getcompletioncertificate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getworkphotos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_logaudit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L270",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getworkcountbystatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L298",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_gettotalpayment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getpendingftocount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "src_lib_database_ts",
+      "target": "lib_database_getworkpaymentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "lib_database_getworkftos",
+      "target": "lib_database_getvouchers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L373",
+      "weight": 1.0,
+      "source": "lib_database_getworkpaymentsummary",
+      "target": "lib_database_getvouchers",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "4a17abd932090d65a7c0bfc5b38fef36039fd09d"
+}

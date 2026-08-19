@@ -1,0 +1,154 @@
+{
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/test-terminal.js": {
+    "mtime": 1787050030.684864,
+    "hash": "3d1c7b8706509bfa644bbb17fe5d2917"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/jest.config.ts": {
+    "mtime": 1787046519.408627,
+    "hash": "e1afae8774c97b1ea5bd30f496e1ba3f"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/next.config.ts": {
+    "mtime": 1787048088.313049,
+    "hash": "fd00baa0b08a93ac846fc3d9a385e448"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/tailwind.config.js": {
+    "mtime": 1787048074.398398,
+    "hash": "0b03a81cc0d207fe7c0e34f96e060b81"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/next-env.d.ts": {
+    "mtime": 1787047581.4140494,
+    "hash": "aa94238a90e7d04b7a47ecc3145ba6a0"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/jest.setup.ts": {
+    "mtime": 1787046566.4644225,
+    "hash": "7598213791c14db609f47486dc3abb23"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/test-cli.js": {
+    "mtime": 1787049376.6441314,
+    "hash": "08cba7f893204a363b745d2a0bd136e2"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/eslint.config.mjs": {
+    "mtime": 1787045330.1489348,
+    "hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/postcss.config.mjs": {
+    "mtime": 1787047974.9600952,
+    "hash": "d3fd1d29b05a09ff76b595a70e1e7d50"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/supabase/schema.sql": {
+    "mtime": 1787045638.1029031,
+    "hash": "f175b8c39ea78a9eb839bbe141792fc9"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/supabase/seed.sql": {
+    "mtime": 1787045672.868978,
+    "hash": "a0838713a9393f6436d65ecbeb64183b"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/store.test.ts": {
+    "mtime": 1787046295.054526,
+    "hash": "1b8aec38ae6bf29dede1c38c5f7747fd"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/types.test.ts": {
+    "mtime": 1787046265.1844373,
+    "hash": "b3ed5923bdce946badf17f048543c024"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/__tests__/chatbot.test.ts": {
+    "mtime": 1787046736.020717,
+    "hash": "0bd04719cabd8063ce782ceb24c025f9"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/page.tsx": {
+    "mtime": 1787045613.9947968,
+    "hash": "7c7809cda6ff395e96c5894698a13932"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/layout.tsx": {
+    "mtime": 1787045723.2360919,
+    "hash": "aae7a901dd372d75b5a9474de88967e1"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/api/chat/route.ts": {
+    "mtime": 1787077403.1040788,
+    "hash": "1c362e9af28108c742a4ece0e9650044"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/api/health/route.ts": {
+    "mtime": 1787049308.5889308,
+    "hash": "3362bcfe6a4e262e66e3a05f2c528e1f"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/app/api/whatsapp/webhook/route.ts": {
+    "mtime": 1787058019.9408462,
+    "hash": "07cc1bafb1b96d54528b948a9f60bb66"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/components/TerminalChat.tsx": {
+    "mtime": 1787045537.7472615,
+    "hash": "086f1c28d13d5f28dca4b283b0a707f2"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/types/index.ts": {
+    "mtime": 1787045449.5444398,
+    "hash": "1bf1e5b6afa418d9c1733beb1c06617f"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/store/chatStore.ts": {
+    "mtime": 1787045514.374441,
+    "hash": "ac52d246bb76aef5f6d6d957317421d2"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/chatbot.ts": {
+    "mtime": 1787077224.0986423,
+    "hash": "c4f44e003d1a640744bf8126c177eee1"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/whatsapp.ts": {
+    "mtime": 1787055255.7493765,
+    "hash": "beea7302724ca6a14ce25caea861f17c"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/rag.ts": {
+    "mtime": 1787074487.220126,
+    "hash": "01a99fe4008b35ef2649fb20883cdb16"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/cohere.ts": {
+    "mtime": 1787074966.7646754,
+    "hash": "dfb45687df843c20eda69e93b342fa5a"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/supabase.ts": {
+    "mtime": 1787045456.584107,
+    "hash": "2623afdb1fe4f637b4dbf0ed24086b4b"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/src/lib/database.ts": {
+    "mtime": 1787045500.774685,
+    "hash": "66794e721dca36c09a2d4c93bda9f572"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/README.md": {
+    "mtime": 1787045330.1486917,
+    "hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/CLAUDE.md": {
+    "mtime": 1787045380.9276247,
+    "hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/RAG_SYSTEM.md": {
+    "mtime": 1787075232.486953,
+    "hash": "4875b75d275f2c6b7885a06fcf46d968"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/AGENTS.md": {
+    "mtime": 1787045380.9276247,
+    "hash": "01e8142356e15c3404e0d84c48187cd0"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/uploads/eWork_Enterprise_General_Information_Knowledge_Base.pdf": {
+    "mtime": 1787071042.6840441,
+    "hash": "815232b1e531734d7c189c5d39e07e93"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/next.svg": {
+    "mtime": 1787045330.150633,
+    "hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/vercel.svg": {
+    "mtime": 1787045330.1507297,
+    "hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/window.svg": {
+    "mtime": 1787045330.1508036,
+    "hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/globe.svg": {
+    "mtime": 1787045330.150633,
+    "hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/home/ptspl03/MY PROJECTS/AI/ework_rag_chroma/ework-chatbot/public/file.svg": {
+    "mtime": 1787045330.1486917,
+    "hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  }
+}

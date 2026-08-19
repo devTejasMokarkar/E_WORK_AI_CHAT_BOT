@@ -1,0 +1,327 @@
+{
+  "communities": {
+    "0": [
+      "app_page_home",
+      "components_terminalchat_menu_options",
+      "lib_database_getftos",
+      "src_app_page_tsx",
+      "src_components_terminalchat_tsx",
+      "src_lib_database_ts",
+      "src_store_chatstore_ts",
+      "src_tests_types_test_ts",
+      "src_types_index_ts",
+      "store_chatstore_createinitialsession",
+      "store_chatstore_usechatstore",
+      "tests_types_test_requiredmenus",
+      "tests_types_test_result",
+      "tests_types_test_session",
+      "tests_types_test_validlevels",
+      "tests_types_test_validroles",
+      "tests_types_test_validstatuses",
+      "tests_types_test_validtypes",
+      "types_index_aiqueryresult",
+      "types_index_auditlog",
+      "types_index_chatmessage",
+      "types_index_chatsession",
+      "types_index_completioncertificate",
+      "types_index_eworkuser",
+      "types_index_fto",
+      "types_index_measurementbook",
+      "types_index_menustate",
+      "types_index_ragdocument",
+      "types_index_ragresult",
+      "types_index_sanction",
+      "types_index_userlevel",
+      "types_index_userrole",
+      "types_index_userstatus",
+      "types_index_utilizationcertificate",
+      "types_index_voucher",
+      "types_index_work",
+      "types_index_workphoto",
+      "types_index_workstatus"
+    ],
+    "1": [
+      "lib_chatbot_getmbdisplay",
+      "lib_chatbot_getregisteredusermenu",
+      "lib_chatbot_getunregisteredusermessage",
+      "lib_chatbot_getworkphotosdisplay",
+      "lib_chatbot_handlemainmenu",
+      "lib_database_checkuserregistration",
+      "lib_database_getmeasurementbooks",
+      "lib_database_getworkphotos",
+      "lib_database_logaudit",
+      "src_lib_chatbot_ts",
+      "tests_chatbot_test_invalidoptions",
+      "tests_chatbot_test_menumap",
+      "tests_chatbot_test_mockanswers",
+      "tests_chatbot_test_options",
+      "tests_chatbot_test_submenus",
+      "tests_chatbot_test_validoptions"
+    ],
+    "2": [
+      "lib_chatbot_handleaskchatbot",
+      "lib_cohere_cohere",
+      "lib_cohere_detectlanguage",
+      "lib_cohere_generatechatcompletion",
+      "lib_cohere_generateembedding",
+      "lib_cohere_generatequeryembedding",
+      "lib_rag_addtoknowledgebase",
+      "lib_rag_chunktext",
+      "lib_rag_fallbackkeywordsearch",
+      "lib_rag_getcontextforquery",
+      "lib_rag_getknowledgebasecategories",
+      "lib_rag_searchbycategory",
+      "lib_rag_searchknowledgebase",
+      "src_lib_cohere_ts",
+      "src_lib_rag_ts",
+      "src_lib_supabase_ts"
+    ],
+    "3": [
+      "lib_chatbot_formatcurrency",
+      "lib_chatbot_formatdate",
+      "lib_chatbot_getccdisplay",
+      "lib_chatbot_getestimatedisplay",
+      "lib_chatbot_getftodisplay",
+      "lib_chatbot_getpaymentdisplay",
+      "lib_chatbot_getsanctionsdisplay",
+      "lib_chatbot_getucdisplay",
+      "lib_chatbot_getworkprogressdisplay",
+      "lib_chatbot_handleworkdetails",
+      "lib_database_getcompletioncertificate",
+      "lib_database_getsanctions",
+      "lib_database_getutilizationcertificate",
+      "lib_database_getvouchers",
+      "lib_database_getworkftos"
+    ],
+    "4": [
+      "ework_chatbot_test_cli_http",
+      "ework_chatbot_test_terminal_chatwithbot",
+      "ework_chatbot_test_terminal_checkhealth",
+      "ework_chatbot_test_terminal_colors",
+      "ework_chatbot_test_terminal_conversationhistory",
+      "ework_chatbot_test_terminal_formatresponse",
+      "ework_chatbot_test_terminal_handlecommand",
+      "ework_chatbot_test_terminal_makerequest",
+      "ework_chatbot_test_terminal_readline",
+      "ework_chatbot_test_terminal_rl",
+      "ework_chatbot_test_terminal_showconversationhistory",
+      "ework_chatbot_test_terminal_showsessioninfo",
+      "ework_chatbot_test_terminal_trimmedinput",
+      "test_terminal_js"
+    ],
+    "5": [
+      "src_tests_store_test_ts",
+      "tests_store_test_addmessage",
+      "tests_store_test_addmessage_setmobilenumber_resetsession",
+      "tests_store_test_after",
+      "tests_store_test_before",
+      "tests_store_test_setcontext",
+      "tests_store_test_setcontext_clearcontext",
+      "tests_store_test_setmenu",
+      "tests_store_test_setmobilenumber",
+      "tests_store_test_setregistered",
+      "tests_store_test_setuser",
+      "tests_store_test_user"
+    ],
+    "6": [
+      "chat_route_createsessionstate",
+      "chat_route_post",
+      "chat_route_sessionstore",
+      "health_route_get",
+      "lib_whatsapp_markmessageasread",
+      "lib_whatsapp_sendwhatsappmessage",
+      "lib_whatsapp_sendwhatsapptemplatemessage",
+      "src_app_api_chat_route_ts",
+      "src_lib_whatsapp_ts",
+      "webhook_route_handleincomingmessage",
+      "webhook_route_markasread"
+    ],
+    "7": [
+      "lib_chatbot_getwelcomemessage",
+      "lib_chatbot_getworkdetailsdisplay",
+      "lib_chatbot_getworkdetailsmenu",
+      "lib_chatbot_handleback",
+      "lib_chatbot_handleeworkinfo",
+      "lib_chatbot_handleworkstatus",
+      "lib_chatbot_handleworksubmenu",
+      "lib_chatbot_processuserinput",
+      "lib_database_getworkbyid"
+    ],
+    "8": [
+      "ework_chatbot_test_cli_args",
+      "ework_chatbot_test_cli_runtests",
+      "ework_chatbot_test_cli_testchat",
+      "ework_chatbot_test_cli_testhealth",
+      "ework_chatbot_test_cli_testrag",
+      "ework_chatbot_test_cli_testworks",
+      "test_cli_js"
+    ],
+    "9": [
+      "app_layout_geistmono",
+      "app_layout_geistsans",
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "src_app_layout_tsx"
+    ],
+    "10": [
+      "lib_chatbot_handleaskai",
+      "lib_database_getpendingftocount",
+      "lib_database_gettotalpayment",
+      "lib_database_getworkcountbystatus",
+      "lib_database_getworkpaymentsummary"
+    ],
+    "11": [
+      "ework_chatbot_jest_config_config",
+      "ework_chatbot_jest_config_createjestconfig",
+      "jest_config_ts",
+      "postcss_config_mjs"
+    ],
+    "12": [
+      "next_config_ts"
+    ],
+    "13": [
+      "tailwind_config_js"
+    ],
+    "14": [
+      "next_env_d_ts"
+    ],
+    "15": [
+      "jest_setup_ts"
+    ],
+    "16": [
+      "eslint_config_mjs"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09,
+    "1": 0.17,
+    "2": 0.17,
+    "3": 0.27,
+    "4": 0.21,
+    "5": 0.17,
+    "6": 0.25,
+    "7": 0.33,
+    "8": 0.48,
+    "9": 0.4,
+    "10": 0.4,
+    "11": 0.5,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_chatbot_handleworkdetails",
+      "label": "handleWorkDetails()",
+      "degree": 16
+    },
+    {
+      "id": "lib_chatbot_processuserinput",
+      "label": "processUserInput()",
+      "degree": 13
+    },
+    {
+      "id": "lib_chatbot_formatcurrency",
+      "label": "formatCurrency()",
+      "degree": 11
+    },
+    {
+      "id": "lib_chatbot_formatdate",
+      "label": "formatDate()",
+      "degree": 9
+    },
+    {
+      "id": "lib_database_getvouchers",
+      "label": "getVouchers()",
+      "degree": 8
+    },
+    {
+      "id": "lib_chatbot_handleaskai",
+      "label": "handleAskAI()",
+      "degree": 7
+    },
+    {
+      "id": "chat_route_post",
+      "label": "POST()",
+      "degree": 6
+    },
+    {
+      "id": "types_index_eworkuser",
+      "label": "EworkUser",
+      "degree": 6
+    },
+    {
+      "id": "ework_chatbot_test_cli_runtests",
+      "label": "runTests()",
+      "degree": 5
+    },
+    {
+      "id": "types_index_work",
+      "label": "Work",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "POST()",
+      "target": "markAsRead()",
+      "source_files": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/whatsapp/webhook/route.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `markAsRead()` unexpectedly reaches hub `POST()`"
+    },
+    {
+      "source": "POST()",
+      "target": "handleIncomingMessage()",
+      "source_files": [
+        "src/app/api/chat/route.ts",
+        "src/app/api/whatsapp/webhook/route.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `handleIncomingMessage()` unexpectedly reaches hub `POST()`"
+    },
+    {
+      "source": "POST()",
+      "target": "processUserInput()",
+      "source_files": [
+        "src/app/api/chat/route.ts",
+        "src/lib/chatbot.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "handleWorkDetails()",
+      "target": "getWorkById()",
+      "source_files": [
+        "src/lib/chatbot.ts",
+        "src/lib/database.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "POST()",
+      "target": "sendWhatsAppMessage()",
+      "source_files": [
+        "src/app/api/chat/route.ts",
+        "src/lib/whatsapp.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

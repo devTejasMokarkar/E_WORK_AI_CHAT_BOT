@@ -3,6 +3,7 @@
  */
 import { generateChatCompletion, detectLanguage } from './cohere';
 import { checkUserRegistration, getWorkById, getSanctions, getMeasurementBooks, getVouchers, getWorkFTOs, getUtilizationCertificate, getCompletionCertificate, getWorkPhotos, logAudit, getTotalPayment, getWorkCountByStatus, getPendingFTOCount, getWorkPaymentSummary } from './database';
+import { searchKnowledgeBase, getContextForQuery } from './rag';
 import { useChatStore } from '@/store/chatStore';
 import type { ChatSession, Work, MenuState, EworkUser } from '@/types';
 
@@ -169,29 +170,39 @@ Select an option:
 }
 
 async function handleAskChatbot(input: string, session: ChatSession, store: ReturnType<typeof useChatStore.getState>): Promise<string> {
-  // This would use RAG in production - returning mock response for now
-  const mockAnswers: Record<string, string> = {
-    'voucher forward': 'Please verify the following:\n1. The voucher is approved by the maker.\n2. The checker role is properly mapped.\n3. The voucher has not already been forwarded.\n4. All mandatory documents are uploaded.\n5. The voucher amount is within the available MB amount.',
-    'fto': 'To generate an FTO:\n1. Ensure the voucher is approved.\n2. Go to Payment Module > FTO Generation.\n3. Select the voucher and click "Generate FTO".\n4. Verify the details and submit.',
-    'estimate approve': 'To approve an estimate:\n1. Login as Technical Sanction authority.\n2. Go to Works > Estimate Approval.\n3. Select the work and review the estimate.\n4. Click "Approve" or "Reject" with comments.',
-    'payment pending': 'Payment may be pending due to:\n1. FTO not yet generated\n2. FTO under processing in IFMS\n3. Bank details not updated\n4. Payment rejected by IFMS\n\nPlease check the FTO status in the Payment module.',
-    'uc generate': 'To generate Utilization Certificate:\n1. Go to Works > Utilization Certificate.\n2. Select the work with completed measurements.\n3. Verify the expenditure details.\n4. Click "Generate UC".',
-    'final mb': 'To create Final Measurement Book:\n1. Complete all running MBs.\n2. Go to Works > Measurement Book.\n3. Select "Final MB" type.\n4. Enter final measurements and submit for approval.',
-    'vendor list': 'To add/view vendor list:\n1. Go to Admin > Vendor Management.\n2. Click "Add Vendor" to create new vendor.\n3. Ensure vendor has valid GST and bank details.',
-    'work proposal': 'To submit work proposal:\n1. Go to Works > New Work Proposal.\n2. Fill in all required details.\n3. Upload necessary documents.\n4. Submit for approval.',
-  };
+  const normalizedInput = input.trim().toLowerCase();
+  
+  // Handle greetings in ASK_CHATBOT mode
+  if (GREETING_PATTERNS.test(normalizedInput)) {
+    return `Welcome to the e-Work Chatbot! You can ask questions about e-Work in English, Hindi, or mixed language.
 
-  const lowerInput = input.toLowerCase();
-  for (const [key, answer] of Object.entries(mockAnswers)) {
-    if (lowerInput.includes(key)) {
-      return answer;
-    }
+Examples:
+- "Voucher forward नहीं हो रहा है।"
+- "How can I generate an FTO?"
+- "Estimate approve कैसे करें?"
+- "What is eWork?"
+- "How does the workflow work?"
+
+Ask your question (or type "back" to return to main menu):`;
   }
 
-  // If no match, return fallback
-  return `I could not find an appropriate solution for this problem.
-
-Please contact the e-Work Help Desk for further assistance.`;
+  // Use RAG to search knowledge base and generate answer
+  try {
+    const context = await getContextForQuery(input);
+    const language = detectLanguage(input);
+    
+    // Get conversation history for context
+    const conversationHistory = session.messages
+      .filter(m => m.role === 'user' || m.role === 'assistant')
+      .slice(-5)
+      .map(m => ({ role: m.role, text: m.content }));
+    
+    const response = await generateChatCompletion(input, context, conversationHistory);
+    return response;
+  } catch (error) {
+    console.error('Error in handleAskChatbot:', error);
+    return `I encountered an error while searching the knowledge base. Please try again or contact the e-Work Help Desk for further assistance.`;
+  }
 }
 
 function handleEworkInfo(input: string, store: ReturnType<typeof useChatStore.getState>): string {

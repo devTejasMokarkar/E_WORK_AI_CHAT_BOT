@@ -74,7 +74,7 @@ ${context}`;
 
   // Build the chat request
   const requestOptions: Record<string, unknown> = {
-    model: 'command-r-plus',
+    model: 'command-r7b-12-2024',
     message,
     preamble: systemPrompt,
     temperature: 0.7,

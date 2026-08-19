@@ -42,54 +42,72 @@ export async function searchKnowledgeBase(query: string, topK: number = 3): Prom
     // Generate embedding for the query
     const queryEmbedding = await generateQueryEmbedding(query);
     
-    // For now, we'll do a simple text search since we don't have pgvector
-    // In production, you would use Supabase's vector similarity search
+    // Use pgvector similarity search
+    const embeddingStr = `[${queryEmbedding.join(',')}]`;
+    
     const { data: documents, error } = await supabase
-      .from('knowledge_base')
-      .select('content, category, source');
+      .rpc('match_documents', {
+        query_embedding: embeddingStr,
+        match_threshold: 0.5,
+        match_count: topK,
+      });
     
     if (error) {
-      console.error('Error searching knowledge base:', error);
-      return [];
+      // Fallback to keyword search if RPC doesn't exist
+      console.warn('Vector search not available, falling back to keyword search:', error.message);
+      return fallbackKeywordSearch(query, topK);
     }
     
     if (!documents || documents.length === 0) {
       return [];
     }
     
-    // Simple keyword-based scoring as fallback
-    const results: Array<{ doc: typeof documents[0]; score: number }> = [];
-    
-    for (const doc of documents) {
-      // Calculate simple similarity score based on word overlap
-      const queryWords = query.toLowerCase().split(/\s+/);
-      const docWords = doc.content.toLowerCase().split(/\s+/);
-      
-      let matches = 0;
-      for (const qw of queryWords) {
-        if (qw.length > 3 && docWords.some(dw => dw.includes(qw))) {
-          matches++;
-        }
-      }
-      
-      const score = matches / queryWords.length;
-      if (score > 0) {
-        results.push({ doc, score });
-      }
-    }
-    
-    // Sort by score and return top K
-    results.sort((a, b) => b.score - a.score);
-    
-    return results.slice(0, topK).map(r => ({
-      content: r.doc.content,
-      similarity: r.score,
-      source: r.doc.source || r.doc.category || 'unknown',
+    return documents.map(doc => ({
+      content: doc.content,
+      similarity: doc.similarity,
+      source: doc.source || doc.category || 'unknown',
     }));
   } catch (error) {
     console.error('Error in searchKnowledgeBase:', error);
+    return fallbackKeywordSearch(query, topK);
+  }
+}
+
+async function fallbackKeywordSearch(query: string, topK: number): Promise<RAGResult[]> {
+  const { data: documents, error } = await supabase
+    .from('knowledge_base')
+    .select('content, category, source');
+  
+  if (error || !documents || documents.length === 0) {
     return [];
   }
+  
+  const results: Array<{ doc: typeof documents[0]; score: number }> = [];
+  
+  for (const doc of documents) {
+    const queryWords = query.toLowerCase().split(/\s+/);
+    const docWords = doc.content.toLowerCase().split(/\s+/);
+    
+    let matches = 0;
+    for (const qw of queryWords) {
+      if (qw.length > 3 && docWords.some(dw => dw.includes(qw))) {
+        matches++;
+      }
+    }
+    
+    const score = matches / queryWords.length;
+    if (score > 0) {
+      results.push({ doc, score });
+    }
+  }
+  
+  results.sort((a, b) => b.score - a.score);
+  
+  return results.slice(0, topK).map(r => ({
+    content: r.doc.content,
+    similarity: r.score,
+    source: r.doc.source || r.doc.category || 'unknown',
+  }));
 }
 
 /**
