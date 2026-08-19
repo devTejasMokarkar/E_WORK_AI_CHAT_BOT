@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Voucher forward नहीं हो रहा है",
+    "answer": "वाउचर फॉरवर्ड न होने के मुख्य कारण और समाधान:\n\n1. **अनिवार्य दस्तावेजों की कमी**: हर वाउचर के साथ अनिवार्य दस्तावेज (MB रिकॉर्ड, माप पुस्तिका, स्वीकृति पत्र) संलग्न होने चाहिए। दस्तावेज पूरे हैं या नहीं जांचें।\n\n2. **Maker/Checker अनुमोदन बकाया**: वाउचर को Maker द्वारा बनाया जाता है, फिर Checker द्वारा सत्यापित किया जाता है। दोनों चरण पूरे होने पर ही फॉरवर्ड होता है। लंबित अनुमोदन की जांच करें।\n\n3. **वर्कफ्लो स्थिति**: वाउचर की वर्तमान स्थिति देखें - 'Draft', 'Pending Maker', 'Pending Checker', या 'Approved'। केवल 'Approved' स्थिति में फॉरवर्ड होता है।\n\n4. **वित्तीय शर्तें पूरी नहीं**: वाउचर निर्माण आवश्यक वित्तीय शर्तों के पूरा होने के बाद शुरू होता है। TS/FS स्वीकृति और बजट उपलब्धता जांचें।\n\n5. **सिस्टम त्रुटि**: यदि सभी चरण पूरे हैं फिर भी फॉरवर्ड नहीं हो रहा, तो ब्राउज़र कैश साफ करें, पुनः लॉगिन करें, या e-Work हेल्पडेस्क से संपर्क करें।\n\n**संपर्क**: श्री सुरेन्द्र सारण (7737184288) या श्री राजेश कुमार गुर्जर (9414959187)",
+    "category": "Voucher Troubleshooting",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "How can I generate an FTO?",
+    "answer": "FTO (Financial Transaction Order) Generation Process:\n\n1. **Complete Upstream Approvals**: FTO preparation depends on successful completion of:\n   - Work Proposal approved\n   - Estimate (TS/FS) approved\n   - Measurement Book (MB) recorded and verified\n   - Voucher created, verified, and approved\n\n2. **FTO Consolidation**: FTO consolidates approved payment information from vouchers\n\n3. **Digital Signature**: Authorized officer digitally signs the FTO\n\n4. **Submission to IFMS**: FTO is submitted to IFMS (Integrated Financial Management System) for payment processing\n\n5. **Track Status**: Monitor FTO status through stages: Generated → Submitted to IFMS → Processed → Payment Completed\n\n**Prerequisites**: All upstream documents (Estimate, MB, Voucher) must be in 'Approved' status. Vendor must be registered with valid bank details.\n\n**Common Issues**: If FTO generation fails, check voucher approval status and vendor registration status.",
+    "category": "FTO Generation",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "Estimate approve कैसे करें?",
+    "answer": "एस्टीमेट अनुमोदन प्रक्रिया:\n\n1. **एस्टीमेट तैयार करें**: कार्य प्रस्ताव स्वीकृत होने के बाद, तकनीकी सहायक/कनिष्ठ अभियंता द्वारा एस्टीमेट तैयार किया जाता है\n\n2. **दरों और मात्राओं की जांच**: स्वीकृति से पहले दरें, मात्राएं और सहायक गणनाओं को सत्यापित करें\n\n3. **Maker स्तर**: संबंधित अधिकारी (Maker) एस्टीमेट बनाता है और जमा करता है\n\n4. **Checker स्तर**: पर्यवेक्षक अधिकारी (Checker) जानकारी सत्यापित करता है, दस्तावेजों की जांच करता है\n\n5. **अनुमोदक स्तर**: प्राधिकृत अधिकारी (Approver) अपनी सीमा के भीतर एस्टीमेट अनुमोदित करता है\n   - तकनीकी स्वीकृति (TS): तकनीकी मानकों के अनुसार\n   - वित्तीय स्वीकृति (FS): बजट उपलब्धता के अनुसार\n\n6. **संस्करण नियंत्रण**: समीक्षा के बाद एस्टीमेट अद्यतन होने पर संस्करण इतिहास संरक्षित रहता है\n\n**आवश्यक दस्तावेज**: तकनीकी रिपोर्ट, दर विश्लेषण, स्थल योजना, प्रशासनिक स्वीकृति प्रति\n\n**सामान्य समस्या**: यदि अनुमोदन अटका है, तो लंबित स्तर (Maker/Checker/Approver) पहचानें और संबंधित अधिकारी से संपर्क करें।",
+    "category": "Estimate Approval",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "UC generate नहीं हो रही है",
+    "answer": "UC (Utilization Certificate) जनरेट न होने के कारण और समाधान:\n\n1. **पूर्व-आवश्यकताएं पूरी नहीं**: UC तभी जनरेट होती है जब:\n   - सभी वित्तीय गतिविधियां पूर्ण हों (Payment completed)\n   - FTO processed और payment successful हो\n   - कार्य की भौतिक प्रगति 100% हो\n\n2. **वित्तीय रिकॉर्ड असंगत**: अपलोड किए गए दस्तावेजों के साथ सहायक वित्तीय रिकॉर्ड संगत होने चाहिए\n\n3. **विभागीय प्रक्रिया**: विभाग आमतौर पर वित्तीय गतिविधियां अंतिम होने के बाद UC तैयारी पूरी करते हैं\n\n4. **जांचें**:\n   - कार्य स्थिति: 'Completed' होनी चाहिए\n   - भुगतान स्थिति: सभी FTO 'Processed/Payment Completed' हों\n   - MB: Final MB approved हो\n\n5. **समाधान**:\n   - लंबित भुगतान/वाउचर/FTO पूरे करें\n   - Final MB जमा करें और अनुमोदित करवाएं\n   - विभागीय UC प्रभारी से संपर्क करें\n\n**नोट**: UC जनरेशन स्वचालित नहीं है - विभागीय अधिकारी द्वारा शुरू की जाती है।",
+    "category": "UC Generation",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "Final MB कैसे बनाएं?",
+    "answer": "Final MB (Measurement Book) निर्माण प्रक्रिया:\n\n1. **कार्य पूर्णता**: कार्य शारीरिक रूप से 100% पूर्ण होना चाहिए\n\n2. **Running MB पूरा करें**: सभी Running MB (चालू माप पुस्तिकाएं) दर्ज और अनुमोदित हों\n\n3. **माप प्रविष्टि**: तकनीकी सहायक/कनिष्ठ अभियंता द्वारा GPS-समर्थित फोटो और विवरण के साथ माप दर्ज करें\n\n4. **सत्यापन**: उच्च अधिकारी (सहायक अभियंता/कार्यकारी अभियंता) माप सत्यापित करें\n\n5. **Final MB प्रकार चुनें**: MB प्रकार में 'Final MB' चुनें\n\n6. **राशि गणना**: अंतिम माप के आधार पर कुल राशि की गणना\n\n7. **अनुमोदन प्रक्रिया**:\n   - Maker: तकनीकी सहायक MB बनाता है\n   - Checker: सहायक अभियंता सत्यापित करता है\n   - Approver: कार्यकारी अभियंता अनुमोदित करता है\n\n8. **पूर्वापेक्षा**: Final MB भुगतान और FTO के लिए पूर्वापेक्षा है\n\n**आवश्यक**: कार्य पूर्णता प्रमाणपत्र, अंतिम माप शीट, फोटो साक्ष्य, गुणवत्ता परीक्षण रिपोर्ट।",
+    "category": "MB Creation",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "Vendor list में दिखाई नहीं दे रहा है",
+    "answer": "वेंडर सूची में न दिखने के कारण और समाधान:\n\n1. **पंजीकरण स्थिति**: वेंडर का पंजीकरण 'Active' होना चाहिए। निष्क्रिय/समाप्त पंजीकरण सूची से छिप जाते हैं\n\n2. **संगठनात्मक मैपिंग**: वेंडर आपके विभाग/जिले/एजेंसी से मैप होना चाहिए। गलत मैपिंग से वेंडर नहीं दिखेगा\n\n3. **दस्तावेज पूर्णता**: वेंडर प्रोफाइल में सभी आवश्यक दस्तावेज होने चाहिए:\n   - PAN कार्ड\n   - GST प्रमाणपत्र\n   - बैंक खाता विवरण (IFSC सहित)\n   - कार्य अनुभव प्रमाणपत्र\n   - अनुबंध/निविदा दस्तावेज\n   - जन आधार/संस्था आधार (व्यक्तिगत/फर्म के लिए)\n\n4. **सत्यापन स्थिति**: दस्तावेज सत्यापित होने चाहिए। असत्यापित दस्तावेज = सक्रिय नहीं\n\n5. **OTP/e-Sign**: भुगतान प्रक्रिया में OTP और e-Sign अनिवार्य - इसके बिना वेंडर सक्रिय नहीं\n\n6. **समाधान**:\n   - वेंडर प्रोफाइल जांचें और लंबित दस्तावेज अपलोड करें\n   - विभागीय वेंडर प्रशासक से संपर्क करें\n   - संगठनात्मक मैपिंग सही करवाएं\n\n**नोट**: वेंडर पंजीकरण संस्था आधार/जन आधार से ऑटो-फेच होता है।",
+    "category": "Vendor Management",
+    "source": "eWork_Troubleshooting_QA"
+  },
+  {
+    "question": "Work proposal submit नहीं हो रहा है",
+    "answer": "कार्य प्रस्ताव सबमिट न होने के कारण और समाधान:\n\n1. **अनिवार्य जानकारी की कमी**: प्रस्ताव में ये अनिवार्य हैं:\n   - विभागीय जानकारी\n   - कार्य स्थान (जिला/ब्लॉक/ग्राम पंचायत)\n   - बजट अनुमान\n   - सहायक दस्तावेज (भूमि दस्तावेज, तकनीकी रिपोर्ट, आदि)\n\n2. **ड्राफ्ट मोड**: प्रस्ताव 'Draft' में है - 'Submit' बटन दबाएं\n\n3. **अनुमोदन वर्कफ्लो**: सबमिट के बाद:\n   - Maker → Checker → Approver स्तरों से गुजरता है\n   - किसी स्तर पर लौटाया जा सकता है (कमी के लिए)\n\n4. **तकनीकी जांच**:\n   - ब्राउज़र कैश साफ करें\n   - पॉप-अप ब्लॉकर बंद करें\n   - SSO लॉगिन वैध है या नहीं जांचें\n\n5. **आम त्रुटियां**:\n   - 'Mandatory field missing' → सभी लाल चिह्नित फील्ड भरें\n   - 'Invalid budget' → बजट सीमा जांचें\n   - 'Location mismatch' → स्थान पदानुक्रम सही करें\n\n6. **समाधान**:\n   - त्रुटि संदेश नोट करें\n   - सभी अनिवार्य फील्ड और दस्तावेज जांचें\n   - पुनः प्रयास करें\n   - समस्या बने रहने पर e-Work हेल्पडेस्क से संपर्क करें",
+    "category": "Work Proposal",
+    "source": "eWork_Troubleshooting_QA"
+  }
+]

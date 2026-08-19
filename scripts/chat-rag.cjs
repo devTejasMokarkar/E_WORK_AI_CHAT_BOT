@@ -26,6 +26,8 @@ const cohere = new CohereClient({ token: COHERE_API_KEY });
 
 const TOP_K = 5;
 const SIMILARITY_THRESHOLD = 0.3;
+const MAX_RETRIES = 3;
+const RETRY_DELAYS = [1000, 2000, 4000]; // ms
 
 const colors = {
   reset: '\x1b[0m',
@@ -39,27 +41,46 @@ const colors = {
   dim: '\x1b[2m'
 };
 
-async function generateQueryEmbedding(text) {
-  const response = await cohere.embed({
-    texts: [text],
-    model: 'embed-english-v3.0',
-    inputType: 'search_query',
-  });
-  const embeddings = response.embeddings;
-  if (Array.isArray(embeddings) && Array.isArray(embeddings[0])) {
-    return embeddings[0];
+async function withRetry(fn, retries = MAX_RETRIES, delays = RETRY_DELAYS) {
+  try {
+    return await fn();
+  } catch (error) {
+    if (retries <= 0) throw error;
+    
+    const delay = delays[0] || 1000;
+    console.log(`${colors.yellow}Retrying in ${delay}ms... (${MAX_RETRIES - retries + 1}/${MAX_RETRIES})${colors.reset}`);
+    await new Promise(resolve => setTimeout(resolve, delay));
+    return withRetry(fn, retries - 1, delays.slice(1));
   }
-  throw new Error('Failed to generate query embedding');
+}
+
+async function generateQueryEmbedding(text) {
+  return withRetry(async () => {
+    const response = await cohere.embed({
+      texts: [text],
+      model: 'embed-english-v3.0',
+      inputType: 'search_query',
+    });
+    const embeddings = response.embeddings;
+    if (Array.isArray(embeddings) && Array.isArray(embeddings[0])) {
+      return embeddings[0];
+    }
+    throw new Error('Failed to generate query embedding');
+  });
 }
 
 async function searchKnowledgeBase(query, topK = TOP_K) {
   const queryEmbedding = await generateQueryEmbedding(query);
   const embeddingStr = `[${queryEmbedding.join(',')}]`;
   
+  // Use lower threshold for short terms (UC, FTO, MB)
+  const hasShortTerm = /\b(UC|FTO|MB|AS|TS|FS|CC)\b/i.test(query);
+  const threshold = hasShortTerm ? 0.2 : SIMILARITY_THRESHOLD;
+  
   const { data: results, error } = await supabase
     .rpc('match_documents', {
       query_embedding: embeddingStr,
-      match_threshold: SIMILARITY_THRESHOLD,
+      match_threshold: threshold,
       match_count: topK,
     });
   
@@ -67,7 +88,7 @@ async function searchKnowledgeBase(query, topK = TOP_K) {
     return results.map(r => ({
       content: r.content,
       source: r.source || r.category || 'unknown',
-      similarity: r.similarity,
+      similarity: typeof r.similarity === 'string' ? parseFloat(r.similarity) : r.similarity,
     }));
   }
   
@@ -77,13 +98,16 @@ async function searchKnowledgeBase(query, topK = TOP_K) {
   
   if (!documents || documents.length === 0) return [];
   
-  const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  const queryWords = query.toLowerCase().split(/\s+/).filter(w => w.length > 1);
   
   const scored = documents.map(row => {
-    const contentWords = row.content.toLowerCase().split(/\s+/);
+    const contentLower = row.content.toLowerCase();
     let matches = 0;
     for (const qw of queryWords) {
-      if (contentWords.some(dw => dw.includes(qw))) matches++;
+      const wordRegex = new RegExp(`\\b${qw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      if (contentLower.match(wordRegex) || (qw.length <= 4 && contentLower.includes(qw))) {
+        matches++;
+      }
     }
     return { ...row, score: matches / queryWords.length };
   }).filter(r => r.score > 0)
@@ -112,7 +136,7 @@ Question: ${query}
 
 Answer:`;
 
-  try {
+  return withRetry(async () => {
     const response = await cohere.chat({
       model: 'command-r7b-12-2024',
       message: userPrompt,
@@ -121,10 +145,10 @@ Answer:`;
       maxTokens: 500,
     });
     return response.text;
-  } catch (error) {
+  }).catch(error => {
     console.error(`${colors.red}Error generating response:${colors.reset}`, error.message);
-    return 'Sorry, I encountered an error generating a response.';
-  }
+    return 'Sorry, I encountered an error generating a response. Please try again.';
+  });
 }
 
 async function processQuery(query) {

@@ -45,10 +45,14 @@ export async function searchKnowledgeBase(query: string, topK: number = 5): Prom
     // Use pgvector similarity search
     const embeddingStr = `[${queryEmbedding.join(',')}]`;
     
+    // Use lower threshold for short terms (UC, FTO, MB, AS, TS, FS, CC)
+    const hasShortTerm = /\b(UC|FTO|MB|AS|TS|FS|CC)\b/i.test(query);
+    const threshold = hasShortTerm ? 0.2 : 0.3;
+    
     const { data: documents, error } = await supabase
       .rpc('match_documents', {
         query_embedding: embeddingStr,
-        match_threshold: 0.3,
+        match_threshold: threshold,
         match_count: topK,
       });
     
