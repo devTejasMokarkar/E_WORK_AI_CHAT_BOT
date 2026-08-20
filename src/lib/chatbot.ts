@@ -187,7 +187,7 @@ async function handleAskChatbot(input: string, session: ChatSession, store: Retu
 
   // Use RAG to search knowledge base and generate answer
   try {
-    const results = await searchKnowledgeBase(queryToSearch, 3);
+    const results = await searchKnowledgeBase(queryToSearch, 5);
     if (results.length === 0) {
       return `I could not find an appropriate solution for this problem.\nPlease contact the e-Work Help Desk for further assistance.\n\n${printAskChatbotMenu()}`;
     }
@@ -203,6 +203,8 @@ async function handleAskChatbot(input: string, session: ChatSession, store: Retu
     return `${response}\n\n${printAskChatbotMenu()}`;
   } catch (error) {
     console.error('Error in handleAskChatbot:', error);
+    console.error('Error details:', error instanceof Error ? error.message : String(error));
+    console.error('Error stack:', error instanceof Error ? error.stack : 'no stack');
     return `I encountered an error while searching the knowledge base. Please try again or contact the e-Work Help Desk for further assistance.\n\n${printAskChatbotMenu()}`;
   }
 }

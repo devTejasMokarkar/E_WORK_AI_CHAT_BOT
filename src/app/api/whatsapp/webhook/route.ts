@@ -143,23 +143,30 @@ async function handleIncomingMessage(from: string, messageBody: string): Promise
 
   const storeState = createSessionState(session);
 
-  const response = await processUserInput(messageBody, {
-    id: session.id,
-    mobileNumber: session.mobileNumber,
-    user: session.user,
-    isRegistered: session.isRegistered,
-    messages: session.messages,
-    currentMenu: session.currentMenu,
-    context: session.context,
-  }, storeState);
+  try {
+    const response = await processUserInput(messageBody, {
+      id: session.id,
+      mobileNumber: session.mobileNumber,
+      user: session.user,
+      isRegistered: session.isRegistered,
+      messages: session.messages,
+      currentMenu: session.currentMenu,
+      context: session.context,
+    }, storeState);
 
-  session.messages.push(
-    { id: Date.now().toString(), role: 'user', content: messageBody, timestamp: Date.now() },
-    { id: (Date.now() + 1).toString(), role: 'assistant', content: response, timestamp: Date.now() + 1 }
-  );
-  sessionStore.set(sid, session);
+    session.messages.push(
+      { id: Date.now().toString(), role: 'user', content: messageBody, timestamp: Date.now() },
+      { id: (Date.now() + 1).toString(), role: 'assistant', content: response, timestamp: Date.now() + 1 }
+    );
+    sessionStore.set(sid, session);
 
-  return response;
+    return response;
+  } catch (error) {
+    console.error('Error in handleIncomingMessage:', error);
+    console.error('Error details:', error instanceof Error ? error.message : String(error));
+    console.error('Error stack:', error instanceof Error ? error.stack : 'no stack');
+    return 'Sorry, I encountered an error processing your message. Please try again.';
+  }
 }
 
 export async function POST(request: NextRequest) {
