@@ -6,20 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:cli": "node test-cli.js all",
-    "test:health": "node test-cli.js health",
-    "test:chat": "node test-cli.js chat",
-    "test:rag": "node test-cli.js rag",
-    "test:works": "node test-cli.js works",
-    "test:terminal": "node test-terminal.js",
-    "ingest:pdf": "node scripts/ingest-pdf.cjs",
+    "test:unit": "jest src/__tests__/unit",
+    "test:integration": "jest src/__tests__/integration",
+    "ingest:all": "node scripts/ingest-all.cjs",
+    "ingest:qa": "node scripts/ingest-qa.cjs",
+    "test:qa": "node scripts/test-all-qa.cjs",
     "chat:rag": "node scripts/chat-rag.cjs",
     "db:schema": "node scripts/run-schema.cjs",
-    "db:vector-fn": "node scripts/add-vector-function.cjs"
+    "db:vector-fn": "node scripts/add-vector-function.cjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,yml,yaml}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",
@@ -50,11 +59,18 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/uuid": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "eslint-plugin-prettier": "^5.5.6",
+    "husky": "^9.1.7",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
+    "lint-staged": "^17.3.0",
     "ngrok": "^5.0.0-beta.2",
+    "prettier": "^3.3.0",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "ts-jest": "^29.4.12",
     "ts-node": "^10.9.2",
     "typescript": "^5"
