@@ -36,6 +36,10 @@ const createInitialSession = (): ChatSession => ({
   messages: [],
   currentMenu: 'MAIN_MENU',
   context: {},
+  summaries: [],
+  rollingBuffer: [],
+  totalTurns: 0,
+  migrated: false,
 });
 
 export const useChatStore = create<ChatStore>((set, get) => ({

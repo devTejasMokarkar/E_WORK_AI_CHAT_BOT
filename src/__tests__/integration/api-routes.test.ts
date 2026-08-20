@@ -37,6 +37,10 @@ jest.mock('@/store/chatStore', () => ({
         messages: [],
         currentMenu: 'MAIN_MENU',
         context: {},
+        summaries: [],
+        rollingBuffer: [],
+        totalTurns: 0,
+        migrated: false,
       },
       addMessage: jest.fn(),
       setMobileNumber: jest.fn(),
@@ -46,7 +50,7 @@ jest.mock('@/store/chatStore', () => ({
       setContext: jest.fn(),
       clearContext: jest.fn(),
       resetSession: jest.fn(),
-    }),
+    })),
   },
 }));
 

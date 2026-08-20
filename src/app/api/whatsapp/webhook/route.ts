@@ -136,7 +136,11 @@ async function handleIncomingMessage(from: string, messageBody: string): Promise
       user: null,
       isRegistered: false,
       mobileNumber: from,
-      messages: []
+      messages: [],
+      summaries: [],
+      rollingBuffer: [],
+      totalTurns: 0,
+      migrated: false,
     };
     sessionStore.set(sid, session);
   }
@@ -152,6 +156,10 @@ async function handleIncomingMessage(from: string, messageBody: string): Promise
       messages: session.messages,
       currentMenu: session.currentMenu,
       context: session.context,
+      summaries: session.summaries,
+      rollingBuffer: session.rollingBuffer,
+      totalTurns: session.totalTurns,
+      migrated: session.migrated,
     }, storeState);
 
     session.messages.push(

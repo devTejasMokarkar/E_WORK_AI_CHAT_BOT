@@ -2,8 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useChatStore } from '@/store/chatStore';
-import { processUserInput } from '@/lib/chatbot';
-import type { MenuState } from '@/types';
+import type { MenuState, ChatSession } from '@/types';
 
 // Menu option configurations
 const MENU_OPTIONS: Record<MenuState, { prompt: string; options?: string[] }> = {
@@ -121,11 +120,29 @@ export default function TerminalChat() {
     addMessage('user', userInput);
 
     try {
-      // Process the input through the chatbot logic
-      const response = await processUserInput(userInput, session);
+      // Call the API route instead of direct function call
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: userInput,
+          sessionId: session.id,
+        }),
+      });
+
+      const data = await response.json();
       
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
       // Add bot response
-      addMessage('assistant', response);
+      addMessage('assistant', data.response);
+      
+      // Update session state from API response
+      if (data.currentMenu) {
+        setMenu(data.currentMenu);
+      }
     } catch (error) {
       console.error('Error processing input:', error);
       addMessage('assistant', 'I apologize, but I encountered an error. Please try again.');

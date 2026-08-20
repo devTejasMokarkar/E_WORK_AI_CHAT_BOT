@@ -145,6 +145,24 @@ export interface AuditLog {
   created_at: string;
 }
 
+// Memory/Summarization Types
+export interface ContextSummary {
+  id: string;
+  turnRange: { start: number; end: number };
+  summary: string;
+  keyFacts: string[];
+  language: 'en' | 'hi' | 'mixed';
+  tokenCount: number;
+  createdAt: number;
+}
+
+export interface AIContext {
+  summaries: string;
+  recentTurns: ChatMessage[];
+  totalTurns: number;
+  estimatedTokens: number;
+}
+
 // Chat Types
 export interface ChatMessage {
   id: string;
@@ -165,6 +183,11 @@ export interface ChatSession {
     selectedModule?: string;
     previousMenu?: string;
   };
+  // Memory fields
+  summaries: ContextSummary[];
+  rollingBuffer: ChatMessage[];
+  totalTurns: number;
+  migrated: boolean;
 }
 
 export type MenuState = 

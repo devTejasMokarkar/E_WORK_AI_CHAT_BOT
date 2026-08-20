@@ -1,0 +1,10 @@
+export const MEMORY_CONFIG = {
+  MAX_BUFFER_TURNS: 10,
+  SUMMARY_TRIGGER_TURNS: 5,
+  MIN_TURNS_TO_SUMMARIZE: 5,
+  MAX_SUMMARY_TOKENS: 300,
+  SUMMARY_MODEL: 'command-r-08-2024',
+  TOKEN_ESTIMATE_RATIO: 4,
+} as const;
+
+export type MemoryConfig = typeof MEMORY_CONFIG;

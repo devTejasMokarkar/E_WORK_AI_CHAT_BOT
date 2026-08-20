@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server';
 import { processUserInput } from '@/lib/chatbot';
 import { useChatStore } from '@/store/chatStore';
+import { createSession, addTurn, maybeSummarize, migrateLegacySession } from '@/lib/session-manager';
+import type { ChatSession } from '@/types';
 
 // Server-side session store (in production, use Redis or database)
-const sessionStore = new Map<string, any>();
+const sessionStore = new Map<string, ChatSession>();
 
 // Convert server session to client store format
-function createSessionState(session: any) {
+function createSessionState(session: ChatSession) {
   return {
     session: {
       id: session.id,
@@ -16,9 +18,13 @@ function createSessionState(session: any) {
       messages: session.messages,
       currentMenu: session.currentMenu,
       context: session.context,
+      summaries: session.summaries,
+      rollingBuffer: session.rollingBuffer,
+      totalTurns: session.totalTurns,
+      migrated: session.migrated,
     },
     setMenu: (menu: string) => {
-      session.currentMenu = menu;
+      session.currentMenu = menu as any;
       sessionStore.set(session.id, session);
     },
     setMobileNumber: (mobile: string) => {
@@ -62,19 +68,12 @@ export async function POST(request: Request) {
     // Get or create session
     let session = sessionStore.get(sid);
     if (!session) {
-      session = {
-        id: sid,
-        currentMenu: 'MAIN_MENU',
-        context: {
-          workId: null,
-        },
-        user: null,
-        isRegistered: false,
-        mobileNumber: null,
-        messages: []
-      };
+      session = createSession(sid);
       sessionStore.set(sid, session);
     }
+
+    // Migrate legacy session if needed
+    session = migrateLegacySession(session);
 
     // Create store state for this session
     const storeState = createSessionState(session);
@@ -88,13 +87,15 @@ export async function POST(request: Request) {
       messages: session.messages,
       currentMenu: session.currentMenu,
       context: session.context,
+      summaries: session.summaries,
+      rollingBuffer: session.rollingBuffer,
+      totalTurns: session.totalTurns,
+      migrated: session.migrated,
     }, storeState);
 
-    // Update session messages
-    session.messages.push(
-      { id: Date.now().toString(), role: 'user', content: message, timestamp: Date.now() },
-      { id: (Date.now() + 1).toString(), role: 'assistant', content: response, timestamp: Date.now() + 1 }
-    );
+    // Update session with new turn
+    session = addTurn(session, message, response);
+    session = await maybeSummarize(session);
     sessionStore.set(sid, session);
 
     return NextResponse.json({

@@ -1,10 +1,11 @@
 /**
  * e-Work Chatbot Processing Logic
  */
-import { generateChatCompletion, detectLanguage } from './cohere';
+import { generateChatCompletion, detectLanguage, type ChatContext } from './cohere';
 import { checkUserRegistration, getWorkById, getSanctions, getMeasurementBooks, getVouchers, getWorkFTOs, getUtilizationCertificate, getCompletionCertificate, getWorkPhotos, logAudit, getTotalPayment, getWorkCountByStatus, getPendingFTOCount, getWorkPaymentSummary } from './database';
 import { searchKnowledgeBase, getContextForQuery } from './rag';
 import { useChatStore } from '@/store/chatStore';
+import { getContextForAI, addTurn, maybeSummarize } from './session-manager';
 import type { ChatSession, Work, MenuState, EworkUser } from '@/types';
 
 // Greeting patterns
@@ -194,12 +195,13 @@ async function handleAskChatbot(input: string, session: ChatSession, store: Retu
     
     const context = results.map((r, i) => `[Source ${i+1}: ${r.source}]\n${r.content}`).join('\n\n---\n\n');
     
-    const conversationHistory = session.messages
-      .filter(m => m.role === 'user' || m.role === 'assistant')
-      .slice(-5)
-      .map(m => ({ role: m.role as "user"|"assistant", text: m.content }));
+    const aiContext = getContextForAI(session);
+    const chatContext: ChatContext = {
+      summaries: aiContext.summaries,
+      recentTurns: aiContext.recentTurns.map(m => ({ role: m.role as "user"|"assistant", content: m.content }))
+    };
     
-    const response = await generateChatCompletion(queryToSearch, context, conversationHistory);
+    const response = await generateChatCompletion(queryToSearch, context, chatContext);
     return `${response}\n\n${printAskChatbotMenu()}`;
   } catch (error) {
     console.error('Error in handleAskChatbot:', error);

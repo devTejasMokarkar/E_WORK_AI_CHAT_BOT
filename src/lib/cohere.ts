@@ -78,10 +78,15 @@ export async function generateQueryEmbedding(text: string): Promise<number[]> {
 /**
  * Generate chat completion using Cohere
  */
+export interface ChatContext {
+  summaries: string;
+  recentTurns: Array<{ role: 'user' | 'assistant'; content: string }>;
+}
+
 export async function generateChatCompletion(
   message: string,
-  context: string,
-  conversationHistory: Array<{ role: 'user' | 'assistant'; text: string }> = []
+  ragContext: string,
+  context: ChatContext = { summaries: '', recentTurns: [] }
 ): Promise<string> {
   const systemPrompt = `You are the e-Work WhatsApp Assistant, a helpful chatbot for e-Work portal users in India. 
 Your role is to help users with:
@@ -96,8 +101,11 @@ Guidelines:
 - Support both English and Hindi (including mixed language)
 - Only provide information that is explicitly asked for
 
+Conversation summaries:
+${context.summaries || 'No previous conversation summary.'}
+
 Context from knowledge base:
-${context}`;
+${ragContext}`;
 
   // Build the chat request
   const requestOptions: Record<string, unknown> = {
@@ -108,11 +116,11 @@ ${context}`;
     maxTokens: 500,
   };
 
-  // Add chat history if available (using any to bypass strict typing issues)
-  if (conversationHistory.length > 0) {
-    const chatHistory = conversationHistory.slice(-5).map((msg) => ({
+  // Add chat history from recent turns
+  if (context.recentTurns.length > 0) {
+    const chatHistory = context.recentTurns.slice(-10).map((msg) => ({
       role: msg.role === 'user' ? 'User' : 'Chatbot',
-      message: msg.text,
+      message: msg.content,
     }));
     (requestOptions as { chatHistory?: unknown[] }).chatHistory = chatHistory;
   }
