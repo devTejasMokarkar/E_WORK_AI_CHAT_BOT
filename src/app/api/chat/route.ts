@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { processUserInput } from '@/lib/chatbot';
 import { useChatStore } from '@/store/chatStore';
 import { createSession, addTurn, maybeSummarize, migrateLegacySession } from '@/lib/session-manager';
+import { logAudit } from '@/lib/database';
+import { detectLanguage } from '@/lib/cohere';
 import type { ChatSession } from '@/types';
 
 // Server-side session store (in production, use Redis or database)
@@ -97,6 +99,10 @@ export async function POST(request: Request) {
     session = addTurn(session, message, response);
     session = await maybeSummarize(session);
     sessionStore.set(sid, session);
+
+    // Log to audit
+    const lang = detectLanguage(message);
+    await logAudit(session.id, session.mobileNumber, message, response, lang, session.currentMenu);
 
     return NextResponse.json({
       response,

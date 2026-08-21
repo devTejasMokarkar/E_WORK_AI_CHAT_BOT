@@ -81,6 +81,8 @@ async function sendWhatsAppMessage(to: string, message: string) {
 
 import { processUserInput } from '@/lib/chatbot';
 import { useChatStore } from '@/store/chatStore';
+import { logAudit } from '@/lib/database';
+import { detectLanguage } from '@/lib/cohere';
 
 // Server-side session store for WhatsApp
 const sessionStore = new Map<string, any>();
@@ -167,6 +169,10 @@ async function handleIncomingMessage(from: string, messageBody: string): Promise
       { id: (Date.now() + 1).toString(), role: 'assistant', content: response, timestamp: Date.now() + 1 }
     );
     sessionStore.set(sid, session);
+
+    // Log to audit
+    const lang = detectLanguage(messageBody);
+    await logAudit(session.id, session.mobileNumber, messageBody, response, lang, session.currentMenu);
 
     return response;
   } catch (error) {
