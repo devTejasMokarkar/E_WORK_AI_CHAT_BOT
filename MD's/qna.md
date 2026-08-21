@@ -210,3 +210,5 @@
 
 npm run chat:rag - for rag chat
 npm run chat:sum - for summarized chat and memory retention
+
+/api/whatsapp/flow
