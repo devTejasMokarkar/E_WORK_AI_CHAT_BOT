@@ -18,6 +18,7 @@
     "test:qa": "node scripts/test-all-qa.cjs",
     "chat:rag": "node scripts/chat-rag.cjs",
     "chat:sum": "ts-node --project tsconfig.script.json scripts/chat-sum.ts",
+    "eWork:rag": "npx tsx scripts/test-flow.ts",
     "db:schema": "node scripts/run-schema.cjs",
     "db:vector-fn": "node scripts/add-vector-function.cjs",
     "prepare": "husky"

@@ -1,0 +1,1 @@
+import dotenv from 'dotenv'; dotenv.config({ path: '.env.local' }); import WebSocket from 'ws'; if (!globalThis.WebSocket) (globalThis as any).WebSocket = WebSocket; if (!globalThis.crypto) (globalThis as any).crypto = require('crypto').webcrypto;

@@ -4,9 +4,9 @@
 import { generateChatCompletion, detectLanguage, type ChatContext } from './cohere';
 import { checkUserRegistration, getWorkById, getSanctions, getMeasurementBooks, getVouchers, getWorkFTOs, getUtilizationCertificate, getCompletionCertificate, getWorkPhotos, logAudit, getTotalPayment, getWorkCountByStatus, getPendingFTOCount, getWorkPaymentSummary } from './database';
 import { searchKnowledgeBase, getContextForQuery } from './rag';
-import { useChatStore } from '@/store/chatStore';
+import { useChatStore } from '../store/chatStore';
 import { getContextForAI, addTurn, maybeSummarize } from './session-manager';
-import type { ChatSession, Work, MenuState, EworkUser } from '@/types';
+import type { ChatSession, Work, MenuState, EworkUser } from '../types';
 
 // Greeting patterns
 const GREETING_PATTERNS = /^(hi|hello|start|namaste|नमस्ते|hey|hi there)$/i;
@@ -127,11 +127,13 @@ async function handleMainMenu(input: string, store: ReturnType<typeof useChatSto
       store.setMenu('ASK_CHATBOT');
       return printAskChatbotMenu();
     case '2':
-      store.setMenu('AWAITING_WORK_ID');
-      return `Please enter the Work ID.
-
-Example:
-2026-27/3333`;
+      if (store.session.isRegistered && store.session.user) {
+        store.setMenu('EWORK_INFO');
+        return getRegisteredUserMenu(store.session.user);
+      } else {
+        store.setMenu('MAIN_MENU');
+        return getUnregisteredUserMessage();
+      }
     default:
       return 'Invalid option. Please select 1 or 2.';
   }
@@ -157,10 +159,9 @@ Please contact the e-Work administrator to update your mobile number.
 You can still use:
 - Ask e-Work Chatbot (for general problem-related questions)
 
-Select an option:
-1. Work Status
-2. Ask e-Work AI
-3. Main Menu`;
+Please select an option:
+1. Ask e-Work Chatbot
+2. e-Work Information`;
 }
 
 async function handleAskChatbot(input: string, session: ChatSession, store: ReturnType<typeof useChatStore.getState>): Promise<string> {
@@ -216,14 +217,18 @@ function handleEworkInfo(input: string, store: ReturnType<typeof useChatStore.ge
 
   switch (normalizedInput) {
     case '1':
-      store.setMenu('WORK_STATUS');
-      return 'Please enter the Work ID (e.g., 2026-27/3333) or type "back":';
+      if (store.session.isRegistered) {
+        store.setMenu('AWAITING_WORK_ID');
+        return 'Please enter the Work ID (e.g., 2026-27/3333) or type "back":';
+      } else {
+        return 'Access Denied. Your mobile number is not registered in e-Work.\n\nPlease select another option:\n3. Main Menu';
+      }
     case '2':
       if (store.session.isRegistered) {
         store.setMenu('ASK_AI');
         return 'Ask your question about work status, payments, or analytics:';
       } else {
-        return 'This feature is only available for registered users. Please contact the administrator.';
+        return 'Access Denied. This feature is only available for registered users.\n\nPlease select another option:\n3. Main Menu';
       }
     case '3':
       store.setMenu('MAIN_MENU');
@@ -248,7 +253,19 @@ async function handleWorkStatus(input: string, session: ChatSession, store: Retu
   }
 
   if (!authorized) {
-    return 'You are not authorized to view this work because it does not belong to your assigned location or agency.';
+    const user = session.user;
+    const locationInfo = user
+      ? `Your Role: ${user.role} | Level: ${user.user_level} | District: ${user.district}${
+          user.block ? ` | Block: ${user.block}` : ''
+        }`
+      : '';
+    return `🚫 Access Denied
+
+This work does not belong to your assigned jurisdiction.
+
+${locationInfo}
+
+Please enter a Work ID within your assigned area, or type "back" to return.`;
   }
 
   store.setWork(work);
@@ -291,6 +308,8 @@ ${getWorkDetailsMenu()}`;
 }
 
 async function handleWorkDetails(input: string, session: ChatSession, store: ReturnType<typeof useChatStore.getState>): Promise<string> {
+  const HELP_MSG = '\n\nIf the problem persists, please contact the e-Work Help Desk for further assistance.';
+  try {
   const normalizedInput = input.trim().toLowerCase();
   const workId = session.context.workId;
 
@@ -299,9 +318,26 @@ async function handleWorkDetails(input: string, session: ChatSession, store: Ret
   }
 
   // Get work data
-  const { work } = await getWorkById(workId, session.user);
-  if (!work) {
-    return 'Work not found.';
+  const { work, authorized, error } = await getWorkById(workId, session.user);
+  if (error || !work) {
+    return 'Work not found. Please check the Work ID and try again.';
+  }
+
+  if (!authorized) {
+    store.setMenu('AWAITING_WORK_ID');
+    const user = session.user;
+    const locationInfo = user
+      ? `Your Role: ${user.role} | Level: ${user.user_level} | District: ${user.district}${
+          user.block ? ` | Block: ${user.block}` : ''
+        }`
+      : 'No user profile found.';
+    return `🚫 Access Denied
+
+You are not authorized to view this work.
+
+${locationInfo}
+
+This work belongs to a different jurisdiction than yours. Please enter a Work ID within your assigned area, or type "back" to return.`;
   }
 
   const menuMap: Record<string, MenuState> = {
@@ -359,7 +395,11 @@ async function handleWorkDetails(input: string, session: ChatSession, store: Ret
     case 'COMPLETION_CERTIFICATE':
       return await getCCDisplay(workId);
     default:
-      return '';
+      return 'Invalid option. Please select a number from 1-13.';
+  }
+  } catch (err) {
+    console.error('handleWorkDetails error:', err);
+    return 'I could not fetch the requested information at this time.\n\nPlease contact the e-Work Help Desk for further assistance.';
   }
 }
 

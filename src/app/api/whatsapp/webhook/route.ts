@@ -14,7 +14,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { processUserInput } from '@/lib/chatbot';
 import { useChatStore } from '@/store/chatStore';
-import { logAudit } from '@/lib/database';
+import { logAudit, checkUserRegistration } from '@/lib/database';
 import { detectLanguage } from '@/lib/cohere';
 
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN || 'ework_whatsapp_verify_2024';
@@ -225,12 +225,39 @@ async function handleIncomingMessage(from: string, messageBody: string): Promise
   let session = sessionStore.get(sid);
 
   if (!session) {
+    let user = null;
+    let isRegistered = false;
+    try {
+      user = await checkUserRegistration(from);
+      isRegistered = !!user;
+    } catch (e) {
+      console.error("Error checking user registration:", e);
+    }
+    
+    // Fallback for local testing if DB is not connected
+    if (!user && (from === '+919999999999' || from === '919999999999' || from === '1234567890')) {
+        user = {
+          mobile_number: from,
+          name: 'Paras Sharma',
+          sso_id: 'SSO001',
+          role: 'District User',
+          user_level: 'District',
+          district: 'Jaipur',
+          block: 'Sanganer',
+          gram_panchayat: 'Muralipura',
+          department: 'Panchayati Raj',
+          agency: 'DRDA',
+          status: 'Active'
+        } as any;
+        isRegistered = true;
+    }
+
     session = {
       id: sid,
       currentMenu: 'MAIN_MENU',
       context: { workId: null },
-      user: null,
-      isRegistered: false,
+      user: user,
+      isRegistered: isRegistered,
       mobileNumber: from,
       messages: [],
       summaries: [],

@@ -85,62 +85,84 @@ export async function getWorkById(
 }
 
 /**
+ * Resolve a work string ID (e.g. "2026-27/3333") to its internal UUID.
+ * Returns null if not found.
+ */
+export async function getWorkUUID(workStringId: string): Promise<string | null> {
+  try {
+    const { data, error } = await supabase
+      .from('works')
+      .select('id')
+      .eq('work_id', workStringId)
+      .single();
+    if (error || !data) return null;
+    return data.id as string;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Get sanctions for a work
  */
-export async function getSanctions(workId: string, type?: 'Administrative' | 'Technical' | 'Financial'): Promise<Sanction[]> {
-  let query = supabase
-    .from('sanctions')
-    .select('*')
-    .eq('work_id', workId);
+export async function getSanctions(workStringId: string, type?: 'Administrative' | 'Technical' | 'Financial'): Promise<Sanction[]> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return [];
 
-  if (type) {
-    query = query.eq('type', type);
-  }
+    let query = supabase
+      .from('sanctions')
+      .select('*')
+      .eq('work_id', uuid);
 
-  const { data, error } = await query.order('type');
+    if (type) {
+      query = query.eq('type', type);
+    }
 
-  if (error) {
-    console.error('Error fetching sanctions:', error);
+    const { data, error } = await query.order('type');
+    if (error) return [];
+    return (data as Sanction[]) ?? [];
+  } catch {
     return [];
   }
-
-  return (data as Sanction[]) ?? [];
 }
 
 /**
  * Get measurement books for a work
  */
-export async function getMeasurementBooks(workId: string): Promise<MeasurementBook[]> {
-  const { data, error } = await supabase
-    .from('measurement_books')
-    .select('*')
-    .eq('work_id', workId)
-    .order('mb_number');
-
-  if (error) {
-    console.error('Error fetching measurement books:', error);
+export async function getMeasurementBooks(workStringId: string): Promise<MeasurementBook[]> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return [];
+    const { data, error } = await supabase
+      .from('measurement_books')
+      .select('*')
+      .eq('work_id', uuid)
+      .order('mb_number');
+    if (error) return [];
+    return (data as MeasurementBook[]) ?? [];
+  } catch {
     return [];
   }
-
-  return (data as MeasurementBook[]) ?? [];
 }
 
 /**
  * Get vouchers for a work
  */
-export async function getVouchers(workId: string): Promise<Voucher[]> {
-  const { data, error } = await supabase
-    .from('vouchers')
-    .select('*')
-    .eq('work_id', workId)
-    .order('voucher_date', { ascending: false });
-
-  if (error) {
-    console.error('Error fetching vouchers:', error);
+export async function getVouchers(workStringId: string): Promise<Voucher[]> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return [];
+    const { data, error } = await supabase
+      .from('vouchers')
+      .select('*')
+      .eq('work_id', uuid)
+      .order('voucher_date', { ascending: false });
+    if (error) return [];
+    return (data as Voucher[]) ?? [];
+  } catch {
     return [];
   }
-
-  return (data as Voucher[]) ?? [];
 }
 
 /**
@@ -187,54 +209,59 @@ export async function getWorkFTOs(workId: string): Promise<FTO[]> {
 /**
  * Get utilization certificate for a work
  */
-export async function getUtilizationCertificate(workId: string): Promise<UtilizationCertificate | null> {
-  const { data, error } = await supabase
-    .from('utilization_certificates')
-    .select('*')
-    .eq('work_id', workId)
-    .single();
-
-  if (error) {
+export async function getUtilizationCertificate(workStringId: string): Promise<UtilizationCertificate | null> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return null;
+    const { data, error } = await supabase
+      .from('utilization_certificates')
+      .select('*')
+      .eq('work_id', uuid)
+      .single();
+    if (error) return null;
+    return data as UtilizationCertificate;
+  } catch {
     return null;
   }
-
-  return data as UtilizationCertificate;
 }
 
 /**
  * Get completion certificate for a work
  */
-export async function getCompletionCertificate(workId: string): Promise<CompletionCertificate | null> {
-  const { data, error } = await supabase
-    .from('completion_certificates')
-    .select('*')
-    .eq('work_id', workId)
-    .single();
-
-  if (error) {
+export async function getCompletionCertificate(workStringId: string): Promise<CompletionCertificate | null> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return null;
+    const { data, error } = await supabase
+      .from('completion_certificates')
+      .select('*')
+      .eq('work_id', uuid)
+      .single();
+    if (error) return null;
+    return data as CompletionCertificate;
+  } catch {
     return null;
   }
-
-  return data as CompletionCertificate;
 }
 
 /**
  * Get work photos for a work
  */
-export async function getWorkPhotos(workId: string, limit: number = 1): Promise<WorkPhoto[]> {
-  const { data, error } = await supabase
-    .from('work_photos')
-    .select('*')
-    .eq('work_id', workId)
-    .order('upload_date', { ascending: false })
-    .limit(limit);
-
-  if (error) {
-    console.error('Error fetching work photos:', error);
+export async function getWorkPhotos(workStringId: string, limit: number = 1): Promise<WorkPhoto[]> {
+  try {
+    const uuid = await getWorkUUID(workStringId);
+    if (!uuid) return [];
+    const { data, error } = await supabase
+      .from('work_photos')
+      .select('*')
+      .eq('work_id', uuid)
+      .order('upload_date', { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data as WorkPhoto[]) ?? [];
+  } catch {
     return [];
   }
-
-  return (data as WorkPhoto[]) ?? [];
 }
 
 /**
