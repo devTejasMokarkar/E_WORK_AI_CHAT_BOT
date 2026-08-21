@@ -190,8 +190,13 @@ export async function sendWhatsAppFlow(
   const WHATSAPP_PHONE_NUMBER_ID = process.env.WHATSAPP_PHONE_NUMBER_ID;
   const WHATSAPP_ACCESS_TOKEN = process.env.WHATSAPP_ACCESS_TOKEN;
 
-  if (!WHATSAPP_PHONE_NUMBER_ID || !WHATSAPP_ACCESS_TOKEN) {
-    console.error('[WhatsApp Flow] Credentials not configured');
+  if (!WHATSAPP_PHONE_NUMBER_ID) {
+    console.error('[WhatsApp Flow] WHATSAPP_PHONE_NUMBER_ID not configured');
+    return false;
+  }
+
+  if (!WHATSAPP_ACCESS_TOKEN) {
+    console.error('[WhatsApp Flow] WHATSAPP_ACCESS_TOKEN not configured. Get it from Meta Developer Portal > WhatsApp > API Setup.');
     return false;
   }
 

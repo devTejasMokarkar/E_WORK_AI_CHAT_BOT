@@ -4,17 +4,14 @@
  * Handles incoming WhatsApp messages and sends responses.
  *
  * Message type support:
- *  - text          → standard text messages
- *  - interactive   → button_reply / list_reply (tapped menu items)
- *  - nfm_reply     → WhatsApp Flow completion (real business numbers only)
+ *  - text        → standard text messages
+ *  - interactive → button_reply / list_reply (tapped menu items)
  *
  * Menu strategy:
  *  - Welcome message → sends Interactive List Message (works on all numbers)
- *  - WhatsApp Flow   → attempted only if WHATSAPP_FLOW_ID is set AND test mode is off
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { sendWhatsAppFlow, generateFlowToken } from '@/lib/whatsapp-flow';
 import { processUserInput } from '@/lib/chatbot';
 import { useChatStore } from '@/store/chatStore';
 import { logAudit } from '@/lib/database';
@@ -23,9 +20,6 @@ import { detectLanguage } from '@/lib/cohere';
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN || 'ework_whatsapp_verify_2024';
 const WHATSAPP_PHONE_NUMBER_ID = process.env.WHATSAPP_PHONE_NUMBER_ID;
 const WHATSAPP_ACCESS_TOKEN = process.env.WHATSAPP_ACCESS_TOKEN;
-const WHATSAPP_FLOW_ID = process.env.WHATSAPP_FLOW_ID || '';
-// Set WHATSAPP_USE_FLOW=true in .env.local only when you have a real business number
-const USE_FLOW = process.env.WHATSAPP_USE_FLOW === 'true';
 
 // ─── Webhook Verification (GET) ───────────────────────────────────────────────
 
@@ -325,53 +319,20 @@ export async function POST(request: NextRequest) {
                     message.interactive.list_reply?.id ||
                     '';
                   console.log(`[Webhook] Interactive reply from ${from}: "${messageBody}"`);
-                } else if (message.type === 'nfm_reply') {
-                  // WhatsApp Flow completion — only reaches here on real business numbers
-                  try {
-                    const flowResponse = JSON.parse(message.nfm_reply?.response_json || '{}');
-                    const appointmentType =
-                      flowResponse.appointment_type ||
-                      flowResponse.extension_message_response?.params?.appointment_type;
-                    if (appointmentType) {
-                      messageBody = appointmentType;
-                      console.log(`[Webhook] Flow completed by ${from}: appointment_type=${appointmentType}`);
-                    }
-                  } catch (e) {
-                    console.error('[Webhook] Failed to parse nfm_reply:', e);
-                  }
                 }
 
                 if (messageBody && messageId) {
                   await markAsRead(messageId);
                   const response = await handleIncomingMessage(from, messageBody);
 
-                  // ── Welcome response: send interactive list (or Flow on real numbers) ──
+                  // ── Welcome response: send interactive list ──
                   if (isWelcomeResponse(response)) {
-                    if (USE_FLOW && WHATSAPP_FLOW_ID) {
-                      // Real business number — use WhatsApp Flow (RadioButtonsGroup)
-                      console.log(`[Webhook] Sending Flow to ${from}`);
-                      const flowToken = generateFlowToken(from);
-                      const flowSent = await sendWhatsAppFlow(from, WHATSAPP_FLOW_ID, flowToken, {
-                        bodyText: 'Please select your preferred service option below:',
-                        ctaLabel: 'Open Options',
-                      });
-                      if (!flowSent) {
-                        // Flow failed — fall back to interactive list
-                        console.warn('[Webhook] Flow failed, falling back to interactive list');
-                        await sendMainMenuInteractiveList(from);
-                      }
-                    } else {
-                      // Test number or no flow configured — use interactive list message
-                      console.log(`[Webhook] Sending interactive list menu to ${from}`);
-                      await sendMainMenuInteractiveList(from);
-                    }
+                    console.log(`[Webhook] Sending interactive list menu to ${from}`);
+                    await sendMainMenuInteractiveList(from);
                   } else {
                     // All other responses — send as plain text
                     await sendWhatsAppMessage(from, response);
                   }
-                } else if (!messageBody && messageId && message.type === 'nfm_reply') {
-                  await markAsRead(messageId);
-                  console.log(`[Webhook] Flow dismissed by ${from} without selection`);
                 }
               }
             }
